@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="/dist/output.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Document</title>
+	</head>
+	<body class="bg-main font-inter">
+		<div id="announcement" class="bg-main">
+			<div
+				class="flex gap-3 py-2 justify-center text-white text-xs mx-auto w-1440 relative"
+			>
+				<div>
+					Delisting announcement. 12 DeFi and Masternode assets will be
+					delisted. Withdraw by March 31.
+				</div>
+				<a href="#" class="pl-3 border-l text-whiteHeader">Read more</a>
+				<div id="cross" class="my-auto right-0 absolute">
+					<svg
+						width="16"
+						height="16"
+						viewBox="0 0 16 16"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g opacity="0.36">
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M7.99992 0.583496C3.90381 0.583496 0.583252 3.90405 0.583252 8.00016C0.583252 12.0963 3.90381 15.4168 7.99992 15.4168C12.096 15.4168 15.4166 12.0963 15.4166 8.00016C15.4166 3.90405 12.096 0.583496 7.99992 0.583496ZM5.46959 5.46983C5.76248 5.17694 6.23736 5.17694 6.53025 5.46983L7.99992 6.9395L9.46959 5.46983C9.76248 5.17694 10.2374 5.17694 10.5302 5.46983C10.8231 5.76273 10.8231 6.2376 10.5302 6.53049L9.06058 8.00016L10.5302 9.46983C10.8231 9.76273 10.8231 10.2376 10.5302 10.5305C10.2374 10.8234 9.76248 10.8234 9.46959 10.5305L7.99992 9.06082L6.53025 10.5305C6.23736 10.8234 5.76248 10.8234 5.46959 10.5305C5.1767 10.2376 5.1767 9.76273 5.46959 9.46983L6.93926 8.00016L5.46959 6.53049C5.1767 6.2376 5.1767 5.76273 5.46959 5.46983Z"
+								fill="white"
+							/>
+						</g>
+					</svg>
+				</div>
+			</div>
+			<hr class="top-hr" />
+		</div>
+		<div class="w-1440 px-32 m-auto">
+			<header>
+				<div class="flex">
+					<img src="./img/Logo.svg" alt="Logo" />
+					<ul class="ml-7 flex gap-8 items-center text-whiteHeader">
+						<li><a href="#">Platform</a></li>
+						<li><a href="#">Midas Coin</a></li>
+						<li><a href="#">YAPs</a></li>
+						<li><a href="#">Resources</a></li>
+					</ul>
+				</div>
+			</header>
+
+			<section>
+				<h1 class="w-1180 mt-20 text-9xl font-bold text-white z-10">
+					Unlock the full potential of Midas ecosystem <br />
+					<span
+						class="text-transparent bg-clip-text bg-gradient-to-r from-[#4CBFFF] to-[#577CFF] max-w-max"
+					>
+						Buy midas token
+						<hr
+							class="mt-2 h-0.5 border-0 bg-gradient-to-r from-[#577CFF] to-[#4CBFFF] opacity-25 z-0 w-[100%]"
+						/>
+					</span>
+				</h1>
+			</section>
+		</div>
+	</body>
+
+	<style>
+		.top-hr {
+			background: linear-gradient(
+				-45deg,
+				#43a1f7,
+				#8643dc,
+				#f743af,
+				#f78070,
+				#be40ff,
+				#20bcff,
+				#00f69e
+			);
+			height: 2px;
+			animation: gradient 10s linear infinite;
+			background-size: 500% 500%;
+		}
+		@keyframes gradient {
+			0% {
+				background-position: 0% 50%;
+			}
+			50% {
+				background-position: 100% 50%;
+			}
+			100% {
+				background-position: 0% 50%;
+			}
+		}
+	</style>
+	<script src="./announcement.min.js"></script>
+</html>
