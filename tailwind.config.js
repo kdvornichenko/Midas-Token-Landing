@@ -16,6 +16,7 @@ module.exports = {
 			4: '1rem',
 			1180: '73.75rem',
 			1440: '90rem',
+			unset: 'unset',
 		},
 		extend: {
 			animation: {
