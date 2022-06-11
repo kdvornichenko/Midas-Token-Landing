@@ -15,17 +15,42 @@
 		<link rel="shortcut icon" href="./img/favicon.svg" />
 		<title>Midas Token</title>
 	</head>
-	<body class="bg-main font-inter overflow-x-hidden">
+	<body id="body" class="bg-main font-inter overflow-x-hidden">
 		<div id="announcement" class="bg-main">
 			<div
-				class="container flex gap-3 py-2 justify-center text-white text-sm md:text-[10px] mx-auto relative"
+				class="container flex py-2 justify-center text-center text-white text-xs lg:text-sm mx-auto px-4"
 			>
-				<div>
-					Delisting announcement. 12 DeFi and Masternode assets will be
-					delisted. Withdraw by March 31.
+				<div class="block sm:flex w-[90%] sm:w-full gap-3 ml-auto">
+					<div>
+						Delisting announcement. 12 DeFi and Masternode assets will be
+						delisted. Withdraw by March 31.
+						<div class="inline-block sm:hidden">
+							<a href="#" class="flex items-center text-whiteHeader"
+								>Read more
+								<svg
+									class="translate-x-[30%] translate-y-[15%]"
+									width="13"
+									height="10"
+									viewBox="0 0 13 10"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M1 5.08329H11.5M11.5 5.08329L7.41667 1M11.5 5.08329L7.41667 9.16663"
+										stroke="rgba(255, 255, 255, 0.56)"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<a href="#" class="pl-3 border-l hidden sm:block text-whiteHeader"
+						>Read more</a
+					>
 				</div>
-				<a href="#" class="pl-3 border-l text-whiteHeader">Read more</a>
-				<div id="cross" class="my-auto right-0 absolute">
+				<div id="cross" class="sm:my-auto ml-auto">
 					<svg
 						width="16"
 						height="16"
@@ -47,22 +72,53 @@
 			<hr class="top-hr" />
 		</div>
 
-		<div class="container m-auto">
+		<div class="container px-4 m-auto">
 			<header>
-				<div class="flex">
+				<nav class="flex justify-between sm:justify-start">
 					<img src="./img/Logo.svg" alt="Logo" />
-					<ul class="ml-7 flex gap-8 items-center text-whiteHeader">
+					<ul
+						class="hidden sm:flex gap-8 items-center text-sm sm:text-base text-whiteHeader ml-7"
+					>
 						<li><a href="#">Platform</a></li>
 						<li><a href="#">Midas Coin</a></li>
 						<li><a href="#">YAPs</a></li>
 						<li><a href="#">Resources</a></li>
 					</ul>
+
+					<div
+						id="burger"
+						class="burger burger1 flex items-center text-base cursor-pointer sm:hidden z-20"
+					>
+						<div
+							class="w-6 h-0.5 rounded-2xl bg-white before:block before:absolute before:w-6 before:h-0.5 before:bg-white before:rounded-2xl before:-mt-1.5 after:block after:absolute after:w-6 after:h-0.5 after:bg-white after:rounded-2xl after:mt-1.5"
+						></div>
+					</div>
+				</nav>
+
+				<div
+					id="mobMenu"
+					class="flex w-full h-[100vh] text-right fixed top-0 -right-[100%] z-10"
+				>
+					<div
+						id="mobOpacity"
+						class="mobOpacity w-[50%] bg-mobMenu opacity-100"
+					></div>
+					<div class="w-[50%] bg-mobMenu">
+						<ul
+							class="flex flex-col gap-6 text-2xl text-white absolute right-6 top-32"
+						>
+							<li><a href="#">Platform</a></li>
+							<li><a href="#">Midas Coin</a></li>
+							<li><a href="#">YAPs</a></li>
+							<li><a href="#">Resources</a></li>
+						</ul>
+					</div>
 				</div>
 			</header>
 
 			<section>
 				<h1
-					class="w-[85%] mt-20 text-4xl 2xl:text-9xl xl:text-8xl lg:text-8xl md:text-7xl sm:text-6xl px-4 font-bold text-white z-10"
+					class="w-[85%] mt-8 sm:mt-20 text-4xl 2xl:text-9xl xl:text-8xl lg:text-8xl md:text-7xl sm:text-6xl font-bold text-white z-10"
 				>
 					Unlock the full potential of Midas ecosystem <br />
 					<span
@@ -79,6 +135,7 @@
 	</body>
 
 	<style>
+		/* TOP GRADIENT LINE */
 		.top-hr {
 			background: linear-gradient(
 				-45deg,
@@ -105,6 +162,47 @@
 				background-position: 0% 50%;
 			}
 		}
+		/* TOP GRADIENT LINE END */
+
+		/* BURGER ANIMATION */
+		.burger1 {
+			transition: all 0.7s, font-size 0s;
+			transition-timing-function: cubic-bezier(0.68, -0.35, 0.265, 1.35);
+		}
+
+		.burger1 > div {
+			transition: all 0.1s 0.3s, font-size 0s;
+		}
+		.burger1 > div::before,
+		.burger1 > div::after {
+			transition: all 0.3s 0.2s, font-size 0s;
+		}
+		.burger1.toggled {
+			transform: rotate(180deg);
+		}
+		.burger1.toggled > div::before {
+			transform: rotate(45deg) translate(0.5em, 0em);
+		}
+		.burger1.toggled > div {
+			background: transparent;
+		}
+		.burger1.toggled > div::after {
+			transform: rotate(-45deg) translate(0.5em, 0em);
+		}
+
+		/* BURGER ANIMATION END */
+
+		/* MOBMENU */
+		#mobMenu {
+			transition: all 0.5s ease-in-out;
+		}
+
+		#mobOpacity {
+			transition: all 0.5s ease-in-out;
+			transition-delay: 0.45s;
+		}
+		/* MOBMENU END */
 	</style>
+
 	<script src="./announcement.min.js"></script>
 </html>

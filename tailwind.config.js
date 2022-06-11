@@ -4,6 +4,8 @@ module.exports = {
 	theme: {
 		backgroundColor: {
 			main: '#1D2022',
+			mobMenu: '#323639',
+			white: '#ffffff',
 		},
 		colors: {
 			white: '#fff',
@@ -14,8 +16,10 @@ module.exports = {
 		},
 		width: {
 			4: '1rem',
+			6: '1.5rem',
 			1180: '73.75rem',
 			1440: '90rem',
+			full: '100%',
 			unset: 'unset',
 		},
 		extend: {
