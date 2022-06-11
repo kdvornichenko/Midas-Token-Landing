@@ -19,7 +19,7 @@ burger.addEventListener('click', function () {
 	this.classList.toggle('unToggled')
 	mobMenu.classList.toggle('-right-[100%]')
 	mobMenu.classList.toggle('right-0')
-	mobOpacity.classList.toggle('opacity-100')
+	mobOpacity.classList.toggle('opacity-0')
 	mobOpacity.classList.toggle('opacity-50')
 	body.classList.toggle('overflow-y-hidden')
 })
