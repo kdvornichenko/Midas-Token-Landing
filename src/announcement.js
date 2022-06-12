@@ -10,7 +10,8 @@ function closeAnnouncement() {
 // BURGER
 const burger = document.getElementById('burger')
 const mobMenu = document.getElementById('mobMenu')
-const mobOpacity = document.getElementById('mobOpacity')
+const mobLeft = document.getElementById('mobLeft')
+const mobRight = document.getElementById('mobRight')
 const body = document.getElementById('body')
 
 burger.classList.add('untoggle')
@@ -19,7 +20,9 @@ burger.addEventListener('click', function () {
 	this.classList.toggle('unToggled')
 	mobMenu.classList.toggle('-right-[100%]')
 	mobMenu.classList.toggle('right-0')
-	mobOpacity.classList.toggle('opacity-0')
-	mobOpacity.classList.toggle('opacity-50')
+	mobLeft.classList.toggle('-left-full')
+	mobLeft.classList.toggle('-left-4')
+	mobRight.classList.toggle('-right-full')
+	mobRight.classList.toggle('right-0')
 	body.classList.toggle('overflow-y-hidden')
 })
