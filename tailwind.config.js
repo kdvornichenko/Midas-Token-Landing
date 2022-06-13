@@ -25,7 +25,9 @@ module.exports = {
 		},
 		extend: {
 			boxShadow: {
-				'cards': '0px 24px 48px -24px rgba(10, 12, 15, 0.16)',
+				cards: '0px 24px 48px -24px rgba(10, 12, 15, 0.16)',
+				text: '0px 32px 64px rgba(255, 255, 255, 0.08)',
+				textSpan: '0px 16px 64px rgba(78, 185, 255, 0.16)',
 			},
 		},
 	},

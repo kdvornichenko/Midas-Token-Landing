@@ -14,12 +14,28 @@ const mobLeft = document.getElementById('mobLeft')
 const mobRight = document.getElementById('mobRight')
 const body = document.getElementById('body')
 
+function zIndex() {
+	if (mobMenu.classList.contains('z-10')) {
+		setTimeout(function () {
+			mobMenu.classList.remove('z-10')
+		}, 500)
+		setTimeout(function () {
+			mobMenu.classList.add('z-[-1]')
+		}, 500)
+		console.log('qwe')
+	} else {
+		mobMenu.classList.remove('z-[-1]')
+		mobMenu.classList.add('z-10')
+	}
+}
+
 burger.classList.add('untoggle')
 burger.addEventListener('click', function () {
 	this.classList.toggle('toggled')
 	this.classList.toggle('unToggled')
 	mobMenu.classList.toggle('-right-[100%]')
 	mobMenu.classList.toggle('right-0')
+	zIndex()
 	mobLeft.classList.toggle('-left-full')
 	mobLeft.classList.toggle('-left-4')
 	mobRight.classList.toggle('-right-full')
