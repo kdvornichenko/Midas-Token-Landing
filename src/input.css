@@ -1,3 +1,125 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+	.metrics-h4 {
+		@apply font-bold text-4xl md:text-[42px] lg:text-5xl xl:text-5xl 2xl:text-6xl text-center tracking-tighter;
+	}
+
+	.mainscreen-cards {
+		@apply w-[95%] sm:w-[70%] md:w-[60%] lg:w-[30%] flex flex-col bg-white bg-opacity-[0.08] rounded-3xl p-8 xl:p-7 lg:p-6 md:p-5 sm:p-4 border border-white border-opacity-5 shadow-cards;
+	}
+
+	.section {
+	@apply py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-32;	
+	}
+
+	.
+}
+
+@layer components {
+	/* H1 */
+	h1,
+	h2 {
+		text-shadow: 0px 32px 64px rgba(255, 255, 255, 0.08);
+	}
+	#h1 span {
+		text-shadow: 0px 16px 64px rgba(78, 185, 255, 0.16);
+	}
+	/* H1 END */
+
+	/* TOP GRADIENT LINE */
+	.top-hr {
+		background: linear-gradient(
+			-45deg,
+			#43a1f7,
+			#8643dc,
+			#f743af,
+			#f78070,
+			#be40ff,
+			#20bcff,
+			#00f69e
+		);
+		height: 2px;
+		animation: gradient 10s linear infinite;
+		background-size: 500% 500%;
+		border-top: 0;
+	}
+	@keyframes gradient {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+	/* TOP GRADIENT LINE END */
+
+	/* BURGER ANIMATION */
+	.burger1 {
+		transition: all 0.7s, font-size 0s;
+		transition-timing-function: cubic-bezier(0.68, -0.35, 0.265, 1.35);
+	}
+
+	.burger1 > div {
+		transition: all 0.1s 0.3s, font-size 0s;
+	}
+	.burger1 > div::before,
+	.burger1 > div::after {
+		transition: all 0.3s 0.2s, font-size 0s;
+	}
+	.burger1.toggled {
+		transform: rotate(180deg);
+	}
+	.burger1.toggled > div::before {
+		transform: rotate(45deg) translate(0.5em, 0em);
+	}
+	.burger1.toggled > div {
+		background: transparent;
+	}
+	.burger1.toggled > div::after {
+		transform: rotate(-45deg) translate(0.5em, 0em);
+	}
+
+	/* BURGER ANIMATION END */
+
+	/* MOBMENU */
+	#mobLeft,
+	#mobRight {
+		transition: all 0.5s;
+	}
+	/* MOBMENU END */
+
+	/* CARDS GRADIENT */
+	.cards-gradient {
+		background: linear-gradient(
+			90deg,
+			#577cff,
+			#4cbfff,
+			#20bcff,
+			#8643dc,
+			#577cff
+		);
+		animation: gradient 15s linear infinite;
+		background-size: 1000% 1000%;
+	}
+	/* CARDS GRADIENT END */
+
+	/* METRICS SECTION */
+	.gradient-cloud {
+		background: radial-gradient(
+			149.83% 57218.98% at 92.97% 0%,
+			#43a1f7 0%,
+			#00f79e 100%
+		);
+	}
+
+	.gradient-circle {
+		position: absolute;
+	}
+	/* METRICS SECTION END */
+}
