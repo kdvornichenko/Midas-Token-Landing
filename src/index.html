@@ -22,7 +22,7 @@
 		<!-- ANNOUNCEMENT BLOCK -->
 		<div id="announcement" class="bg-main">
 			<div
-				class="container flex py-2 justify-center text-center text-xs lg:text-sm mx-auto px-4"
+				class="container flex py-2 justify-center text-center text-xs lg:text-sm mx-auto"
 			>
 				<div
 					class="block sm:flex justify-center w-[90%] sm:w-full gap-3 ml-auto"
@@ -85,8 +85,8 @@
 		<!-- ANNOUNCEMENT BLOCK END -->
 
 		<!-- MAIN SCREEN + HEADER -->
-		<div class="bg-main rounded-b-3xl lg:rounded-b-[4rem]">
-			<div class="container px-4 m-auto">
+		<div class="bg-main lg:rounded-b-[4rem] rounded-b-3xl ">
+			<div class="container rounded-container">
 				<header>
 					<nav class="flex justify-between sm:justify-start">
 						<img src="./img/Logo.svg" alt="Logo" />
@@ -116,11 +116,11 @@
 					>
 						<div
 							id="mobLeft"
-							class="w-[55%] h-full bg-mobMenu -left-full absolute opacity-80"
+							class="w-[55%] h-full bg-mobMenu -left-full absolute opacity-80 duration-500"
 						></div>
 						<div
 							id="mobRight"
-							class="w-[50%] h-full bg-mobMenu -right-full absolute"
+							class="w-[50%] h-full bg-mobMenu -right-full absolute duration-500"
 						>
 							<ul class="flex flex-col gap-6 text-2xl absolute right-6 top-32">
 								<li><a href="#">Platform</a></li>
@@ -434,19 +434,21 @@
 		<!-- MAIN SCREEN END -->
 
 		<!-- METRIC SECTION -->
-		<div class="bg-main rounded-3xl lg:rounded-[4rem] mt-1">
-			<div class="container px-4 m-auto">
+		<div class="bg-container">
+			<div class="container rounded-container">
 				<section
 					class="section relative"
 				>
 					<h2
-						class="text-4xl tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-8xl font-bold text-center z-10"
+						class="h2 text-center"
 					>
 						Midas token <br />
 						metrics
 					</h2>
 
-					<div class="flex flex-col gap-8 md:gap-0 md:flex-row justify-center items-center md:items-baseline mt-10 lg:mt-28 md:h-36 lg:h-40 xl:h-52">
+
+					<!-- METRIC VALUE -->
+					<div class="flex flex-col gap-6 sm:gap-8 md:gap-0 md:flex-row justify-center items-center md:items-baseline mt-10 lg:mt-28 md:h-36 lg:h-40 xl:h-52">
 						<div class="md:self-end md:absolute md:left-[15%] xl:left-1/4 md:-translate-x-2/4">
 							<h4 class="metrics-h4">
 								$183,241
@@ -472,23 +474,29 @@
 							</div>
 						</div>
 					</div>
+					<!-- METRIC VALUE END -->
 
+
+					<!-- METRIC GRADIENT CLOUD + CIRCLE -->
 					<div>
-						<div class="gradient-cloud mx-auto md:mt-0 blur-[150px] h-40 md:h-50 w-[300px] md:w-[400px] lg:w-[500px] xl:w-[688px]"></div>
-						<div class="gradient-circle mt-0 sm:mt-24 md:mt-0 w-[75%] lg:w-[70%] xl:w-[55%] 2xl:w-unset top-[45%] 2xl:top-[50%] left-[50%] -translate-x-1/2 ">
-							<img src="./img/gradient-circle.svg" alt="" />
+						<div class="gradient-cloud-metric mx-auto md:mt-0 blur-[150px] h-40 md:h-50 w-[300px] md:w-[400px] lg:w-[500px] xl:w-[688px]"></div>
+						<div class="gradient-circle mt-0 sm:mt-24 md:mt-0 w-[75%] lg:w-[70%] xl:w-[55%] 2xl:w-unset top-[45%] 2xl:top-[50%] left-[50%] -translate-x-1/2 absolute">
+							<img src="./img/gradient-circle.svg" alt="Gradient Circle" class='mt-6 sm:mt-0'/>
 						</div>
 						<div
 							class="absolute left-[50%] top-[45%] sm:top-[55%] md:top-[50%] -translate-x-2/4 translate-y-full"
 						>
-							<h3 class="font-bold text-[42px] md:text-5xl xl:text-6xl 2xl:text-[80px] text-center">$19.24</h3>
+							<h3 class="h3 text-center">$19.24</h3>
 							<div class="mt-0 md:mt-1 xl:mt-2 text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-center">Current price</div>
 						</div>
 					</div>
+					<!-- METRIC GRADIENT CLOUD + CIRCLE END -->
 
+
+					<!-- METRIC CARDS -->
 					<div class="mt-12 sm:mt-24 w-[80%] sm:w-[90%] md:w-[unset] flex flex-col mx-auto sm:flex-row justify-center gap-5">
 						<div
-							class="flex flex-col justify-between sm:w-[50%] md:w-[310px] lg:w-[400px] xl:w-[480px] md:h-[160px] h-40 lg:h-44 xl:h-[206px] p-8 bg-white bg-opacity-5 border border-white border-opacity-5 shadow-metricsCard backdrop-blur-lg rounded-[32px]"
+							class="metrics-card"
 						>
 							<img src="./img/meta-mask-ico.svg" alt="Meta Mask" class='w-[62px]'/>
 							<div class="">
@@ -498,7 +506,7 @@
 							</div>
 						</div>
 						<div
-							class="flex flex-col justify-between sm:w-[50%] md:w-[310px] lg:w-[400px] xl:w-[480px] md:h-[160px] h-40 lg:h-44 xl:h-[206px] p-8 bg-white bg-opacity-5 border border-white border-opacity-5 shadow-metricsCard backdrop-blur-lg rounded-[32px]"
+							class="metrics-card"
 						>
 								<img src="./img/smart-contract-ico.svg" alt="Smart Contract" class='w-[40px]'/>
 							<div class="">
@@ -506,20 +514,81 @@
 									>Smart contract &#8594</a
 								>
 							</div>
+					<!-- METRIC CARDS END -->
 							
 						</div>
 					</div>
 				</section>
 			</div>
 		</div>
-		<!-- METRIC SECTION -->
+		<!-- METRIC SECTION END -->
 
 		<!-- STAKE SECTION -->
-		<div class="bg-main rounded-3xl lg:rounded-[4rem] mt-1">
+		<div class="bg-container">
 			<div class="container px-4 m-auto">
 				<section
-					class="section"
+					class="section ml-12"
 				>
+
+					<!-- STAKE APY GRADIENT -->
+					<div class=''>
+						<h2 class='h2 text-left'>Stake Midas <br /> token and</h2>
+						<div class='-ml-12 max-w-[732px] min-w-[300px] w-[50%] sm:w-[65%] md:w-[65%] lg:w-[65%] xl:w-[50%] stake-apy-gradient mt-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-bold px-6 py-3 lg:px-12 lg:py-6 rounded-[24px] sm:rounded-[30px] md:rounded-[34px] lg:rounded-[44px] xl:rounded-[50px] 2xl:rounded-[60px] -rotate-2'>Earn 30% APY</div>
+					</div>
+					<!-- STAKE APY GRADIENT END -->
+
+					<div class='relative'>
+						<div class='xl:w-[70%] mt-5 md:mt-7 lg:mt-12 font-semibold text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-tighter '>
+						MIDAS token<span class='opacity-40'> is based on Fantom network with total supply of </span>5,000,000 tokens<span class='opacity-40'> generating rewards for <br class='hidden 2xl:block'> its holders.</span>
+					</div>
+
+					<!-- STAKE TOTALS -->
+					<div class=''>
+						<div class="gradient-cloud-stake mx-auto md:mt-0 blur-[150px] h-40 md:h-[1000px] w-[300px] md:w-[400px] lg:w-[500px] xl:w-[1000px] absolute top-[15%] -translate-y-[25%]"></div>
+
+						<div class='max-w-max font-thin text-9xl tracking-[0.32em] opacity-10 -rotate-90 absolute top-[55%] left-[20%]'>
+							OVER
+						</div>
+
+						<div class='max-w-max text-right ml-[50%]'>
+							<div class='stake-total-item'>
+								<div  class='stake-icon bg-[#FF68C3]'>
+									<img src="./img/wallet-icon.svg" alt="Wallet Icon">
+								</div>
+								<div>
+									<h3 class='h3'>$30 million</h3>
+									<div class='stake-total-subtext'>
+										Are staking MIDAS tokens
+									</div>
+								</div>
+							</div>
+							<div class='stake-total-item'>
+								<div  class='stake-icon bg-[#EA68FF]'>
+									<img src="./img/users-icon.svg" alt="Users Icon">
+								</div>
+								<div>
+									<h3 class='h3'> 2,600 users </h3>
+									<div class='stake-total-subtext'>
+										Are staking MIDAS tokens
+									</div>
+								</div>
+							</div>
+							<div class='stake-total-item'>
+								<div  class='stake-icon bg-[#CF68FF]'>
+									<img src="./img/layers-icon.svg" alt="Layers Icon">
+								</div>
+								<div>
+									<h3 class='h3'> 1,800,000</h3>
+									<div class='stake-total-subtext'>
+										Total staked MIDAS
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<!-- STAKE TOTALS END -->
+
 				</section>
 			</div>
 		</div>

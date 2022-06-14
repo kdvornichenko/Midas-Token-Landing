@@ -3,19 +3,49 @@
 @tailwind utilities;
 
 @layer utilities {
-	.metrics-h4 {
-		@apply font-bold text-4xl md:text-[42px] lg:text-5xl xl:text-5xl 2xl:text-6xl text-center tracking-tighter;
+	.h2 {
+		@apply text-4xl tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-bold;
+	}
+
+	.h3 {
+		@apply font-bold text-[42px] md:text-5xl xl:text-6xl 2xl:text-[80px];
+	}
+
+	.bg-container {
+		@apply bg-main rounded-3xl lg:rounded-[4rem] mt-1;
+	}
+
+	.rounded-container {
+		@apply m-auto px-4;
+	}
+
+	.section {
+		@apply py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-32;
 	}
 
 	.mainscreen-cards {
 		@apply w-[95%] sm:w-[70%] md:w-[60%] lg:w-[30%] flex flex-col bg-white bg-opacity-[0.08] rounded-3xl p-8 xl:p-7 lg:p-6 md:p-5 sm:p-4 border border-white border-opacity-5 shadow-cards;
 	}
 
-	.section {
-	@apply py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-32;	
+	.metrics-h4 {
+		@apply font-bold text-4xl md:text-[42px] lg:text-5xl xl:text-5xl 2xl:text-6xl text-center tracking-tighter;
 	}
 
-	.
+	.metrics-card {
+		@apply flex flex-col justify-between sm:w-[50%] md:w-[310px] lg:w-[400px] xl:w-[480px] h-32 md:h-[160px] lg:h-44 xl:h-[206px] p-4 lg:p-8  bg-white bg-opacity-5 border border-white border-opacity-5 shadow-metricsCard backdrop-blur-lg rounded-[32px];
+	}
+
+	.stake-total-item {
+		@apply mt-16 flex items-center gap-12;
+	}
+
+	.stake-total-subtext {
+		@apply mt-3 font-medium text-3xl tracking-tighter opacity-40 text-left;
+	}
+
+	.stake-icon {
+		@apply p-7 rounded-full bg-opacity-20;
+	}
 }
 
 @layer components {
@@ -87,13 +117,6 @@
 
 	/* BURGER ANIMATION END */
 
-	/* MOBMENU */
-	#mobLeft,
-	#mobRight {
-		transition: all 0.5s;
-	}
-	/* MOBMENU END */
-
 	/* CARDS GRADIENT */
 	.cards-gradient {
 		background: linear-gradient(
@@ -110,16 +133,28 @@
 	/* CARDS GRADIENT END */
 
 	/* METRICS SECTION */
-	.gradient-cloud {
+	.gradient-cloud-metric {
 		background: radial-gradient(
 			149.83% 57218.98% at 92.97% 0%,
 			#43a1f7 0%,
 			#00f79e 100%
 		);
 	}
-
-	.gradient-circle {
-		position: absolute;
-	}
 	/* METRICS SECTION END */
+
+	/* STAKE SECTION */
+	.stake-apy-gradient {
+		background: linear-gradient(267.57deg, #fb4a4a 0%, #9b4cff 100%);
+		animation: gradient 6s linear infinite;
+		background-size: 500% 500%;
+	}
+
+	.gradient-cloud-stake {
+		background: radial-gradient(
+			32.51% 32.51% at 50% 50%,
+			rgba(255, 108, 223, 0.24) 0%,
+			rgba(255, 108, 188, 0) 100%
+		);
+	}
+	/* STAKE SECTION END */
 }
