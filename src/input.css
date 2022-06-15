@@ -36,19 +36,27 @@
 	}
 
 	.stake-total-item {
-		@apply mt-16 flex items-center gap-12;
+		@apply mt-8 md:mt-16 flex items-center gap-4 md:gap-12 text-left;
+	}
+
+	.h3-stake {
+		@apply font-bold text-[32px] sm:text-5xl xl:text-6xl 2xl:text-[80px];
 	}
 
 	.stake-total-subtext {
-		@apply mt-3 font-medium text-3xl tracking-tighter opacity-40 text-left;
+		@apply mt-1 md:mt-3 font-medium text-lg md:text-2xl lg:text-3xl tracking-tighter opacity-40 text-left;
 	}
 
 	.stake-icon {
-		@apply p-7 rounded-full bg-opacity-20;
+		@apply w-[22%] sm:w-unset p-4 md:p-7 rounded-full bg-opacity-20;
 	}
 }
 
 @layer components {
+	html {
+		font-family: 'inter';
+	}
+
 	/* H1 */
 	h1,
 	h2 {
