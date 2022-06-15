@@ -11,6 +11,10 @@
 		@apply font-bold text-[42px] md:text-5xl xl:text-6xl 2xl:text-[80px];
 	}
 
+	.subtext {
+		@apply mt-5 md:mt-7 lg:mt-12 font-semibold text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-tighter;
+	}
+
 	.bg-container {
 		@apply bg-main rounded-3xl lg:rounded-[4rem] mt-1;
 	}
@@ -49,6 +53,10 @@
 
 	.stake-icon {
 		@apply w-[22%] sm:w-unset p-4 md:p-7 rounded-full bg-opacity-20;
+	}
+
+	.utility-payout-bars {
+		@apply flex justify-center pb-2 sm:pb-4 px-3 sm:px-6 w-[20%] sm:w-[90px] h-[80%] sm:h-[260px] rounded-xl sm:rounded-3xl border-white border-2 border-opacity-5;
 	}
 }
 
@@ -135,7 +143,7 @@
 			#8643dc,
 			#577cff
 		);
-		animation: gradient 15s linear infinite;
+		animation: gradient 10s linear infinite;
 		background-size: 1000% 1000%;
 	}
 	/* CARDS GRADIENT END */
@@ -165,4 +173,17 @@
 		);
 	}
 	/* STAKE SECTION END */
+
+	/* UTILITY SECTION */
+
+	/* PAYOUT BLOCK */
+
+	.yellow-bar {
+		background: linear-gradient(43.67deg, #ffc657 24.69%, #ffd977 75.86%);
+		box-shadow: 0px 16px 80px -12px rgba(255, 215, 115, 0.24);
+	}
+
+	/* PAYOUT BLOCK END */
+
+	/* UTILITY SECTION END */
 }
