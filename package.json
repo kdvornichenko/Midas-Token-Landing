@@ -4,5 +4,23 @@
   },
   "dependencies": {
     "tailwindcss-border-gradients": "^2.0.3"
-  }
+  },
+  "name": "midas-token-landing",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kdvornichenko/Midas-Token-Landing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kdvornichenko/Midas-Token-Landing/issues"
+  },
+  "homepage": "https://github.com/kdvornichenko/Midas-Token-Landing#readme",
+  "description": ""
 }

@@ -2144,10 +2144,6 @@ h1,
     width: unset;
   }
 
-  .sm\:w-\[40\%\] {
-    width: 40%;
-  }
-
   .sm\:flex-row {
     flex-direction: row;
   }
