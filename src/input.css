@@ -176,14 +176,17 @@
 
 	/* UTILITY SECTION */
 
-	/* PAYOUT BLOCK */
-
 	.yellow-bar {
 		background: linear-gradient(43.67deg, #ffc657 24.69%, #ffd977 75.86%);
 		box-shadow: 0px 16px 80px -12px rgba(255, 215, 115, 0.24);
 	}
 
-	/* PAYOUT BLOCK END */
-
 	/* UTILITY SECTION END */
+
+	/* SUPPORT SECTION */
+	.gradient-cloud-support {
+		background: linear-gradient(90.07deg, #ba62ff 18.51%, #57b1f2 80.43%);
+		filter: blur(150px);
+	}
+	/* SUPPORT SECTION END */
 }
