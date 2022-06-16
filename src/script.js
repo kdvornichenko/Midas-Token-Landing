@@ -44,38 +44,54 @@ window.addEventListener('DOMContentLoaded', function () {
 		body.classList.toggle('overflow-y-hidden')
 	})
 
-	// METRIC SECTION INCREMENTING COUNTER
-	const counters = document.querySelectorAll('#counter')
+	// // METRIC SECTION INCREMENTING COUNTER
+	// const counters = document.querySelectorAll('#counter')
 
-	counters.forEach(counter => {
-		counter.innerText = '0'
+	// counters.forEach(counter => {
+	// 	counter.innerText = '0'
 
-		const updateCounter = () => {
-			const target = +counter.getAttribute('data-target')
-			const c = +counter.innerText
+	// 	const updateCounter = () => {
+	// 		const target = +counter.getAttribute('data-target')
+	// 		const c = +counter.innerText
 
-			const increment = target / 100
+	// 		const increment = target / 100
 
-			if (c < target) {
-				counter.innerText = `${Math.ceil(c + increment)}`
-				setTimeout(updateCounter, 5)
-			} else {
-				counter.innerText = target
-			}
-		}
+	// 		if (c < target) {
+	// 			counter.innerText = `${Math.ceil(c + increment)}`
+	// 			setTimeout(updateCounter, 5)
+	// 		} else {
+	// 			counter.innerText = target
+	// 		}
+	// 	}
 
-		window.addEventListener('scroll', function () {
-			if (this.scrollY >= 1100) {
-				updateCounter()
-			}
-		})
-	})
+	// 	window.addEventListener('scroll', function () {
+	// 		if (this.scrollY >= 1100) {
+	// 			updateCounter()
+	// 		}
+	// 	})
+	// })
 
 	// FAQ ACCORDION
 	const accordion = document.getElementsByClassName('accordion-btn')
 
 	for (let i = 0; i < accordion.length; i++) {
 		accordion[i].addEventListener('click', function () {
+			if (accordion[i].classList.contains('active')) {
+				this.style.transition = '0.4s'
+				this.style.transitionDelay = '0.08s'
+				this.style.borderBottomLeftRadius = '24px'
+				this.style.borderBottomRightRadius = '24px'
+				setTimeout(function () {
+					accordion[i].style.transitionDelay = '0s'
+					accordion[i].style.transition = '0s'
+				}, 100)
+			} else {
+				this.style.transition = '0s'
+				this.style.transitionDelay = '0s'
+				this.style.borderBottomLeftRadius = '0'
+				this.style.borderBottomRightRadius = '0'
+			}
+
 			this.classList.toggle('active')
 
 			const panel = this.nextElementSibling

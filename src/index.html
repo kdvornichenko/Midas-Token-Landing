@@ -22,13 +22,13 @@
 				class="container flex py-2 justify-center text-center text-xs lg:text-sm mx-auto"
 			>
 				<div
-					class="block sm:flex justify-center w-[90%] sm:w-full gap-3 ml-auto"
+					class="block sm:flex justify-center items-center w-[90%] sm:w-full gap-3 ml-auto"
 				>
-					<div>
+					<div class='border-r pr-3'>
 						Delisting announcement. 12 DeFi and Masternode assets will be
 						delisted. Withdraw by March 31.
 						<div class="inline-block sm:hidden">
-							<a href="#" class="flex items-center opacity-60"
+							<a href="#" class="flex items-center opacity-60 links-hover"
 								>Read more
 
 								<!-- READ MORE MOB ARROW -->
@@ -52,11 +52,11 @@
 							</a>
 						</div>
 					</div>
-					<a href="#" class="pl-3 border-l hidden sm:block opacity-60"
+					<a href="#" class="hidden sm:block opacity-60 links-hover"
 						>Read more</a
 					>
 				</div>
-				<div id="cross" class="sm:my-auto ml-auto">
+				<div id="cross" class="sm:my-auto ml-auto cursor-pointer opacity-40 hover:opacity-100 transition-all">
 					<!-- ANNOUNCEMENT CROSS ICON -->
 					<svg
 						width="16"
@@ -65,7 +65,7 @@
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
 					>
-						<g opacity="0.36">
+						<g>
 							<path
 								fill-rule="evenodd"
 								clip-rule="evenodd"
@@ -81,60 +81,64 @@
 		</div>
 		<!-- ANNOUNCEMENT BLOCK END -->
 
-		<!-- MAIN SCREEN + HEADER -->
-		<div class="bg-main lg:rounded-b-[4rem] rounded-b-3xl ">
-			<div class="container rounded-container">
-				<header>
-					<nav class="flex justify-between sm:justify-start">
-						<img src="./img/Logo.svg" alt="Logo" />
-						<ul
-							class="hidden sm:flex gap-8 items-center text-sm sm:text-base opacity-60 ml-7"
-						>
-							<li><a href="#">Platform</a></li>
-							<li><a href="#">Midas Coin</a></li>
-							<li><a href="#">YAPs</a></li>
-							<li><a href="#">Resources</a></li>
-						</ul>
+		<!-- HEADER -->	
+		<header class="bg-main">
+			<div class='container rounded-container'>
+				<nav class="flex justify-between sm:justify-start">
+				<img src="./img/Logo.svg" alt="Logo" />
+				<ul
+					class="hidden sm:flex gap-8 items-center text-sm sm:text-base ml-7"
+				>
+					<li><a class='links-hover opacity-60' href="#">Platform</a></li>
+					<li><a class='links-hover opacity-60' href="#">Midas Coin</a></li>
+					<li><a class='links-hover opacity-60' href="#">YAPs</a></li>
+					<li><a class='links-hover opacity-60' href="#">Resources</a></li>
+				</ul>
 
-						<div
-							id="burger"
-							class="burger burger1 flex items-center text-base cursor-pointer sm:hidden z-20"
-						>
-							<div
-								class="w-6 h-0.5 rounded-2xl bg-white before:block before:absolute before:w-6 before:h-0.5 before:bg-white before:rounded-2xl before:-mt-1.5 after:block after:absolute after:w-6 after:h-0.5 after:bg-white after:rounded-2xl after:mt-1.5"
-							></div>
-						</div>
-					</nav>
-
-					<!-- MOBILE MENU -->
+				<div
+					id="burger"
+					class="burger burger1 flex items-center text-base cursor-pointer sm:hidden z-20"
+				>
 					<div
-						id="mobMenu"
-						class="flex w-full sm:hidden h-[100vh] text-right fixed top-0 z-[-1]"
-					>
-						<div
-							id="mobLeft"
-							class="w-[55%] h-full bg-mobMenu -left-full absolute opacity-80 duration-500"
-						></div>
-						<div
-							id="mobRight"
-							class="w-[50%] h-full bg-mobMenu -right-full absolute duration-500"
-						>
-							<ul class="flex flex-col gap-6 text-2xl absolute right-6 top-32">
-								<li><a href="#">Platform</a></li>
-								<li><a href="#">Midas Coin</a></li>
-								<li><a href="#">YAPs</a></li>
-								<li><a href="#">Resources</a></li>
-							</ul>
-						</div>
-					</div>
-					<!-- MOBILE MENU END -->
-				</header>
+						class="w-6 h-0.5 rounded-2xl bg-white before:block before:absolute before:w-6 before:h-0.5 before:bg-white before:rounded-2xl before:-mt-1.5 after:block after:absolute after:w-6 after:h-0.5 after:bg-white after:rounded-2xl after:mt-1.5"
+					></div>
+				</div>
+			</nav>
 
+			<!-- MOBILE MENU -->
+			<div
+				id="mobMenu"
+				class="flex w-full sm:hidden h-[100vh] text-right fixed top-0 z-[-1]"
+			>
+				<div
+					id="mobLeft"
+					class="w-[55%] h-full bg-mobMenu -left-full absolute opacity-80 duration-500"
+				></div>
+				<div
+					id="mobRight"
+					class="w-[50%] h-full bg-mobMenu -right-full absolute duration-500"
+				>
+					<ul class="flex flex-col gap-6 text-2xl absolute right-6 top-32">
+						<li><a href="#">Platform</a></li>
+						<li><a href="#">Midas Coin</a></li>
+						<li><a href="#">YAPs</a></li>
+						<li><a href="#">Resources</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- MOBILE MENU END -->
+			</div>
+		</header>
+		<!-- HEADER END -->
+
+		<!-- MAIN SCREEN -->
+		<div class="bg-main lg:rounded-b-[4rem] rounded-b-3xl pt-8 sm:pt-16 md:pt-18 lg:pt-20 ">
+				<div class="container rounded-container">
 				<!-- MAIN SECTION -->
 				<section class="pb-6 lg:pb-32">
 					<h1
 						id="h1"
-						class="w-[85%] mt-8 sm:mt-16 md:mt-18 lg:mt-20 text-5xl tracking-tighter 2xl:text-9xl xl:text-8xl lg:text-8xl md:text-7xl sm:text-6xl font-bold z-10"
+						class="w-[85%] text-5xl tracking-tighter 2xl:text-9xl xl:text-8xl lg:text-8xl md:text-7xl sm:text-6xl font-bold z-10"
 					>
 						Unlock the full potential of Midas ecosystem <br />
 						<span
@@ -217,8 +221,8 @@
 								<div class="text-2xl lg:text-3xl font-semibold text-center">
 									Stake MIDAS token and earn 30% APY
 								</div>
-								<div class="mt-3 text-center opacity-40">
-									<a href="#">Read more</a>
+								<div class="mt-3 text-center ">
+									<a href="#" class='links-hover opacity-40'>Read more</a>
 								</div>
 							</div>
 						</div>
@@ -325,8 +329,8 @@
 								<div class="text-2xl lg:text-3xl font-semibold text-center">
 									Get increased APY by getting rewards in MIDAS
 								</div>
-								<div class="mt-3 text-center opacity-40">
-									<a href="#">How it work?</a>
+								<div class="mt-3 text-center">
+									<a href="#" class='links-hover opacity-40'>How it work?</a>
 								</div>
 							</div>
 						</div>
@@ -416,8 +420,8 @@
 								<div class="text-2xl lg:text-3xl font-semibold text-center">
 									Get increased APY by getting rewards in MIDAS
 								</div>
-								<div class="mt-3 text-center opacity-40">
-									<a href="#">How it work?</a>
+								<div class="mt-3 text-center">
+									<a href="#" class='links-hover opacity-40'>How it work?</a>
 								</div>
 							</div>
 						</div>
@@ -447,8 +451,7 @@
 					<!-- METRIC VALUE -->
 					<div class="flex flex-col gap-6 sm:gap-8 md:gap-0 md:flex-row justify-center items-center md:items-baseline mt-10 lg:mt-28 md:h-36 lg:h-40 xl:h-52">
 						<div class="md:self-end md:absolute md:left-[15%] xl:left-1/4 md:-translate-x-2/4">
-							<h4  class="metrics-h4">
-								$ <span id='counter' data-target="183"></span>,<span id='counter' data-target="241">241</span>
+							<h4  class="metrics-h4">$183,241
 							</h4>
 							<div class="mt-2 text-2xl text-center opacity-40">
 								Volume (24 hours)
@@ -457,15 +460,13 @@
 
 						<div>
 							<h4  class="metrics-h4">
-								$ <span id='counter' data-target="47"></span>,<span id='counter' data-target="572"></span>,<span id='counter' data-target="397"></span>
+								$47,572,397
 							</h4>
 							<div class="mt-2 text-2xl text-center opacity-40">Market cap</div>
 						</div>
 
 						<div class="md:self-end md:absolute md:right-[15%] xl:right-1/4 md:translate-x-2/4">
-							<h4  class="metrics-h4">
-								$ <span id='counter' data-target="2"></span>,<span id='counter' data-target="575"></span>,<span id='counter' data-target="183.89"></span>
-							</h4>
+							<h4  class="metrics-h4">$2,575,183.89</h4>
 							<div class="mt-2 text-2xl text-center opacity-40">
 								Circulation supply
 							</div>
@@ -890,6 +891,7 @@
 					</div>
 					<!-- APY BOOST BLOCK END -->
 
+					<button class=' block mt-14 mx-auto'><a href="#" class='btn-hover py-2 md:py-4 xl:py-6 px-4 md:px-6 lg:px-8 xl:px-12 bg-white text-black text-2xl font-bold tracking-tight rounded-xl md:rounded-2xl lg:rounded-3xl'><span>Learn more &#8594</span></a></button>
 				</section>
 			</div>
 		</div>
@@ -957,7 +959,7 @@
 								<div class='step-label-text'>STEP I</div>
 							</div>
 							<h3 class='h3 mt-4 md:mt-10'>Make a deposit</h3>
-							<div class='mt-0 md:mt-6 font-medium -tracking-[0.016em]'>For clarity, we will show examples with FTM</div>
+							<div class='mt-4 md:mt-6 font-medium -tracking-[0.016em]'>For clarity, we will show examples with FTM</div>
 							<div class='how-to-buy-subtext opacity-40'>Make a deposit in supported crypto assets (20+) on Midas platform</div>
 						</div>
 						<div class='h-96 sm:h-auto w-full sm:w-[70%] md:w-[40%]'>
@@ -989,12 +991,12 @@
 							</div>
 							<h3 class='h3 mt-4 md:mt-10'>Make a swap</h3>
 							<div class='how-to-buy-subtext opacity-40'>Swap your crypto to MIDAS token and start earning 30% APY </div>
-							<button class='hidden sm:block mt-8 md:mt-10 lg:mt-12 xl:mt-20 py-2 md:py-4 xl:py-6 px-4 md:px-6 lg:px-8 xl:px-12 bg-white text-black text-2xl font-bold tracking-tight rounded-xl md:rounded-2xl lg:rounded-3xl'><a href="#">Go to platform &#8594</a></button>
+							<button class='hidden sm:block mt-8 md:mt-10 lg:mt-12 xl:mt-20'><a href="#" class='btn-hover py-2 md:py-4 xl:py-6 px-4 md:px-6 lg:px-8 xl:px-12 bg-white text-black text-2xl font-bold tracking-tight rounded-xl md:rounded-2xl lg:rounded-3xl'><span>Go to platform &#8594</span></a></button>
 						</div>
 						<div class='h-96 sm:h-auto w-full sm:w-[70%] md:w-[40%]'>
 							<img src="./img/how-to-buy-step3.png" alt="Make a swap" class='h-full mt-6 sm:mt-0 '>
 						</div>
-						<button class='block sm:hidden mt-14 py-2 md:py-4 xl:py-6 px-4 md:px-6 lg:px-8 xl:px-12 bg-white text-black text-2xl font-bold tracking-tight rounded-xl md:rounded-2xl lg:rounded-3xl'><a href="#">Go to platform &#8594</a></button>
+						<button class='block sm:hidden mt-14'><a href="#" class='py-2 md:py-4 xl:py-6 px-4 md:px-6 lg:px-8 xl:px-12 bg-white text-black text-2xl font-bold tracking-tight rounded-xl md:rounded-2xl lg:rounded-3xl'>Go to platform &#8594</a></button>
 					</div>
 					<!-- STEP III END -->
 
@@ -1005,92 +1007,146 @@
 		<!-- HOW TO BUY SECTION END -->
 
 		<!-- FAQ SECTION -->
-			<div class="bg-container">
-				<div class="container rounded-container">
-					<section
-						class="section relative"
-					>
-					<h2 class='h2 text-center'>Frequently asked questions</h2>
-					<div class="subtext text-center opacity-40">Everything you need to know about the Midas. Can’t find the answer you’re looking for? Feel free to contact me directly via:</div>
-					<div class='mt-12 flex flex-wrap justify-evenly gap-4'>
-						<!-- TELEGRAM -->
-						<div >
-							<a href="#" class='flex gap-3 items-center'>
-								<svg width="31" height="26" viewBox="0 0 31 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<div class="bg-container-faq">
+			<div class="container rounded-container">
+				<section class="section relative">
+				<h2 class='h2 text-center'>Frequently asked questions</h2>
+				<div class="subtext text-center opacity-40">Everything you need to know about the Midas. Can’t find the answer you’re looking for? Feel free to contact me directly via:</div>
+				<div class='mt-12 flex flex-wrap justify-evenly gap-4'>
+					<!-- TELEGRAM -->
+					<div>
+						<a href="#" class='flex gap-3 items-center social'>
+							<svg width="31" height="26" viewBox="0 0 31 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M27.9969 0.575718L1.40191 10.8312C-0.41309 11.5602 -0.40259 12.5727 1.06891 13.0242L7.89691 15.1542L23.6949 5.18672C24.4419 4.73222 25.1244 4.97672 24.5634 5.47472L11.7639 17.0262H11.7609L11.7639 17.0277L11.2929 24.0657C11.9829 24.0657 12.2874 23.7492 12.6744 23.3757L15.9909 20.1507L22.8894 25.2462C24.1614 25.9467 25.0749 25.5867 25.3914 24.0687L29.9199 2.72672C30.3834 0.868219 29.2104 0.0267183 27.9969 0.575718Z" fill="#43A1F7"/>
 							</svg>
-							<div class='faq-social'>Telegram</div>
-							</a>
-						</div>
-						<!-- TELEGRAM END -->
-
-						<!-- DISCORD -->
-						<div >
-							<a href="#" class='flex gap-3 items-center'>
-								<svg width="31" height="24" viewBox="0 0 31 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M20.2287 0.390625C19.9307 0.924156 19.6653 1.47515 19.4337 2.04062C17.1578 1.6807 14.8395 1.6807 12.5637 2.04062C12.332 1.47515 12.0666 0.924156 11.7687 0.390625C9.62484 0.756926 7.54076 1.41293 5.57366 2.34062C2.05607 7.41706 0.460811 13.5801 1.07365 19.7256C3.36601 21.4489 5.93884 22.7632 8.67865 23.6106C9.30253 22.7865 9.85931 21.9137 10.3437 21.0006C9.44977 20.671 8.5906 20.254 7.77866 19.7556C8.00135 19.6075 8.212 19.4419 8.40866 19.2606C10.7763 20.4011 13.3706 20.9933 15.9987 20.9933C18.6267 20.9933 21.221 20.4011 23.5887 19.2606C23.7987 19.4406 24.0087 19.6056 24.2187 19.7556C23.4023 20.2501 22.544 20.6717 21.6537 21.0156C22.1179 21.9494 22.6598 22.8426 23.2737 23.6856C26.01 22.8412 28.5784 21.5265 30.8637 19.8006C31.4912 13.6539 29.8947 7.4859 26.3637 2.41563C24.4186 1.46873 22.3552 0.787631 20.2287 0.390625ZM11.0187 16.2156C10.268 16.1617 9.56747 15.8192 9.06404 15.2598C8.5606 14.7004 8.29345 13.9678 8.31866 13.2156C8.28965 12.4625 8.55548 11.7278 9.05967 11.1675C9.56386 10.6073 10.2666 10.2658 11.0187 10.2156C11.7707 10.2658 12.4734 10.6073 12.9776 11.1675C13.4818 11.7278 13.7477 12.4625 13.7187 13.2156C13.7477 13.9688 13.4818 14.7035 12.9776 15.2637C12.4734 15.8239 11.7707 16.1654 11.0187 16.2156ZM20.9787 16.2156C20.228 16.1617 19.5275 15.8192 19.024 15.2598C18.5206 14.7004 18.2534 13.9678 18.2787 13.2156C18.2496 12.4625 18.5155 11.7278 19.0197 11.1675C19.5239 10.6073 20.2266 10.2658 20.9787 10.2156C21.7321 10.2621 22.4371 10.6025 22.9421 11.1635C23.447 11.7246 23.7115 12.4615 23.6787 13.2156C23.7115 13.9697 23.447 14.7066 22.9421 15.2677C22.4371 15.8288 21.7321 16.1692 20.9787 16.2156Z" fill="#43A1F7"/>
-							</svg>
-							<div class='faq-social'>Discord</div>
-							</a>
-						</div>
-						<!-- DISCORD END -->
-
-						<!-- SUPPORT -->
-						<div >
-							<a href="#" class='flex gap-3 items-center'>
-								<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M14.9998 0.916504C9.43097 0.916504 4.9165 5.43097 4.9165 10.9998V15.5832H4.8665H4.83607C4.30192 15.5832 3.85607 15.5832 3.49183 15.6129C3.11195 15.6439 2.75529 15.7111 2.41803 15.8829C1.90058 16.1466 1.47989 16.5673 1.21624 17.0847C1.04439 17.422 0.977282 17.7786 0.946244 18.1585C0.916485 18.5227 0.916494 18.9686 0.916504 19.5027L0.916505 19.5332V25.1332L0.916504 25.1636C0.916494 25.6978 0.916485 26.1436 0.946244 26.5078C0.977282 26.8877 1.04439 27.2444 1.21624 27.5816C1.47989 28.0991 1.90058 28.5198 2.41803 28.7834C2.75529 28.9553 3.11195 29.0224 3.49183 29.0534C3.85602 29.0832 4.3018 29.0832 4.83587 29.0832H4.83605H4.8665H6.4665H6.49696H6.49714C7.03121 29.0832 7.47699 29.0832 7.84117 29.0534C8.22106 29.0224 8.57772 28.9553 8.91498 28.7834C9.43242 28.5198 9.85312 28.0991 10.1168 27.5816C10.2886 27.2444 10.3557 26.8877 10.3868 26.5078C10.4165 26.1436 10.4165 25.6978 10.4165 25.1637V25.1636V25.1332V19.5332V19.5027V19.5027C10.4165 18.9685 10.4165 18.5227 10.3868 18.1585C10.3557 17.7786 10.2886 17.422 10.1168 17.0847C9.85312 16.5673 9.43242 16.1466 8.91498 15.8829C8.57772 15.7111 8.22106 15.6439 7.84117 15.6129C7.47694 15.5832 7.03109 15.5832 6.49694 15.5832H6.4665H6.4165V10.9998C6.4165 6.2594 10.2594 2.4165 14.9998 2.4165C19.7403 2.4165 23.5832 6.25939 23.5832 10.9998V15.5832H23.5332H23.5027C22.9686 15.5832 22.5227 15.5832 22.1585 15.6129C21.7786 15.6439 21.422 15.7111 21.0847 15.8829C20.5673 16.1466 20.1466 16.5673 19.8829 17.0847C19.7111 17.422 19.6439 17.7786 19.6129 18.1585C19.5832 18.5227 19.5832 18.9686 19.5832 19.5027V19.5332V25.1332V25.1636C19.5832 25.6978 19.5832 26.1436 19.6129 26.5078C19.6439 26.8877 19.7111 27.2444 19.8829 27.5816C20.1466 28.0991 20.5673 28.5198 21.0847 28.7834C21.422 28.9553 21.7786 29.0224 22.1585 29.0534C22.5227 29.0832 22.9685 29.0832 23.5025 29.0832H23.5027H23.5332H25.1332H25.1636H25.1638C25.6979 29.0832 26.1437 29.0832 26.5078 29.0534C26.8877 29.0224 27.2444 28.9553 27.5816 28.7834C28.0991 28.5198 28.5198 28.0991 28.7834 27.5816C28.9553 27.2444 29.0224 26.8877 29.0534 26.5078C29.0832 26.1437 29.0832 25.6979 29.0832 25.1638V25.1636V25.1332V19.5332V19.5027V19.5025C29.0832 18.9685 29.0832 18.5227 29.0534 18.1585C29.0224 17.7786 28.9553 17.422 28.7834 17.0847C28.5198 16.5673 28.0991 16.1466 27.5816 15.8829C27.2444 15.7111 26.8877 15.6439 26.5078 15.6129C26.1436 15.5832 25.6978 15.5832 25.1636 15.5832H25.1332H25.0832V10.9998C25.0832 5.43097 20.5687 0.916504 14.9998 0.916504Z" fill="#43A1F7"/>
-							</svg>
-							<div class='faq-social'>Support</div>
-							</a>
-						</div>
-						<!-- SUPPORT END -->
-
+							<div class='relative social-hover'>
+								<div class='faq-social '>Telegram</div>
+								<span class='absolute w-[4px] h-full bg-socialBlue'></span>
+							</div>
+							
+						</a>
 					</div>
-					<!-- ACCORDION -->
-						<div class='w-[90%] mx-auto mt-10 md:mt-12 lg:mt-14 xl:mt-20'>
-							<button id='accordion-btn' class="accordion-btn">
-								<div class='accordion-btn-text'>How to start investing</div>
-							</button>
-								<div class="accordion-panel">
-									<p class='py-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, placeat.</p>
-								</div>
-							<button id='accordion-btn' class="accordion-btn">
-								<div class='accordion-btn-text'>How much money is needed to start investing?</div>
-							</button>
-								<div class="accordion-panel">
-									<p class='py-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, placeat.</p>
-								</div>
-							<button id='accordion-btn' class="accordion-btn">
-								<div class='accordion-btn-text'>Is the Midas.Investments secure?</div>
-							</button>
-								<div class="accordion-panel">
-									<p class='py-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, placeat.</p>
-								</div>
-							<button id='accordion-btn' class="accordion-btn">
-								<div class='accordion-btn-text'>How are funds withdrawn from the platform?</div>
-							</button>
-								<div class="accordion-panel">
-									<p class='py-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, placeat.</p>
-								</div>
-							<button id='accordion-btn' class="accordion-btn">
-								<div class='accordion-btn-text'>How Midas.Investments generates yield for its customers?</div>
-							</button>
-								<div class="accordion-panel">
-									<p class='py-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, placeat.</p>
-								</div>
-							<button id='accordion-btn' class="accordion-btn">
-								<div class='accordion-btn-text'>What is Midas token and what are its values?</div>
-							</button>
-								<div class="accordion-panel">
-									<p class='py-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, placeat.</p>
-								</div>
-						</div>
-						<!-- ACCORDION END -->
-					</section>
+					<!-- TELEGRAM END -->
+
+					<!-- DISCORD -->
+					<div >
+						<a href="#" class='flex gap-3 items-center social'>
+							<svg width="31" height="24" viewBox="0 0 31 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M20.2287 0.390625C19.9307 0.924156 19.6653 1.47515 19.4337 2.04062C17.1578 1.6807 14.8395 1.6807 12.5637 2.04062C12.332 1.47515 12.0666 0.924156 11.7687 0.390625C9.62484 0.756926 7.54076 1.41293 5.57366 2.34062C2.05607 7.41706 0.460811 13.5801 1.07365 19.7256C3.36601 21.4489 5.93884 22.7632 8.67865 23.6106C9.30253 22.7865 9.85931 21.9137 10.3437 21.0006C9.44977 20.671 8.5906 20.254 7.77866 19.7556C8.00135 19.6075 8.212 19.4419 8.40866 19.2606C10.7763 20.4011 13.3706 20.9933 15.9987 20.9933C18.6267 20.9933 21.221 20.4011 23.5887 19.2606C23.7987 19.4406 24.0087 19.6056 24.2187 19.7556C23.4023 20.2501 22.544 20.6717 21.6537 21.0156C22.1179 21.9494 22.6598 22.8426 23.2737 23.6856C26.01 22.8412 28.5784 21.5265 30.8637 19.8006C31.4912 13.6539 29.8947 7.4859 26.3637 2.41563C24.4186 1.46873 22.3552 0.787631 20.2287 0.390625ZM11.0187 16.2156C10.268 16.1617 9.56747 15.8192 9.06404 15.2598C8.5606 14.7004 8.29345 13.9678 8.31866 13.2156C8.28965 12.4625 8.55548 11.7278 9.05967 11.1675C9.56386 10.6073 10.2666 10.2658 11.0187 10.2156C11.7707 10.2658 12.4734 10.6073 12.9776 11.1675C13.4818 11.7278 13.7477 12.4625 13.7187 13.2156C13.7477 13.9688 13.4818 14.7035 12.9776 15.2637C12.4734 15.8239 11.7707 16.1654 11.0187 16.2156ZM20.9787 16.2156C20.228 16.1617 19.5275 15.8192 19.024 15.2598C18.5206 14.7004 18.2534 13.9678 18.2787 13.2156C18.2496 12.4625 18.5155 11.7278 19.0197 11.1675C19.5239 10.6073 20.2266 10.2658 20.9787 10.2156C21.7321 10.2621 22.4371 10.6025 22.9421 11.1635C23.447 11.7246 23.7115 12.4615 23.6787 13.2156C23.7115 13.9697 23.447 14.7066 22.9421 15.2677C22.4371 15.8288 21.7321 16.1692 20.9787 16.2156Z" fill="#43A1F7"/>
+						</svg>
+						<div class='relative social-hover'>
+								<div class='faq-social '>Discord</div>
+								<span class='absolute w-[4px] h-full bg-socialBlue'></span>
+							</div>
+						</a>
+					</div>
+					<!-- DISCORD END -->
+
+					<!-- SUPPORT -->
+					<div >
+						<a href="#" class='flex gap-3 items-center social'>
+							<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M14.9998 0.916504C9.43097 0.916504 4.9165 5.43097 4.9165 10.9998V15.5832H4.8665H4.83607C4.30192 15.5832 3.85607 15.5832 3.49183 15.6129C3.11195 15.6439 2.75529 15.7111 2.41803 15.8829C1.90058 16.1466 1.47989 16.5673 1.21624 17.0847C1.04439 17.422 0.977282 17.7786 0.946244 18.1585C0.916485 18.5227 0.916494 18.9686 0.916504 19.5027L0.916505 19.5332V25.1332L0.916504 25.1636C0.916494 25.6978 0.916485 26.1436 0.946244 26.5078C0.977282 26.8877 1.04439 27.2444 1.21624 27.5816C1.47989 28.0991 1.90058 28.5198 2.41803 28.7834C2.75529 28.9553 3.11195 29.0224 3.49183 29.0534C3.85602 29.0832 4.3018 29.0832 4.83587 29.0832H4.83605H4.8665H6.4665H6.49696H6.49714C7.03121 29.0832 7.47699 29.0832 7.84117 29.0534C8.22106 29.0224 8.57772 28.9553 8.91498 28.7834C9.43242 28.5198 9.85312 28.0991 10.1168 27.5816C10.2886 27.2444 10.3557 26.8877 10.3868 26.5078C10.4165 26.1436 10.4165 25.6978 10.4165 25.1637V25.1636V25.1332V19.5332V19.5027V19.5027C10.4165 18.9685 10.4165 18.5227 10.3868 18.1585C10.3557 17.7786 10.2886 17.422 10.1168 17.0847C9.85312 16.5673 9.43242 16.1466 8.91498 15.8829C8.57772 15.7111 8.22106 15.6439 7.84117 15.6129C7.47694 15.5832 7.03109 15.5832 6.49694 15.5832H6.4665H6.4165V10.9998C6.4165 6.2594 10.2594 2.4165 14.9998 2.4165C19.7403 2.4165 23.5832 6.25939 23.5832 10.9998V15.5832H23.5332H23.5027C22.9686 15.5832 22.5227 15.5832 22.1585 15.6129C21.7786 15.6439 21.422 15.7111 21.0847 15.8829C20.5673 16.1466 20.1466 16.5673 19.8829 17.0847C19.7111 17.422 19.6439 17.7786 19.6129 18.1585C19.5832 18.5227 19.5832 18.9686 19.5832 19.5027V19.5332V25.1332V25.1636C19.5832 25.6978 19.5832 26.1436 19.6129 26.5078C19.6439 26.8877 19.7111 27.2444 19.8829 27.5816C20.1466 28.0991 20.5673 28.5198 21.0847 28.7834C21.422 28.9553 21.7786 29.0224 22.1585 29.0534C22.5227 29.0832 22.9685 29.0832 23.5025 29.0832H23.5027H23.5332H25.1332H25.1636H25.1638C25.6979 29.0832 26.1437 29.0832 26.5078 29.0534C26.8877 29.0224 27.2444 28.9553 27.5816 28.7834C28.0991 28.5198 28.5198 28.0991 28.7834 27.5816C28.9553 27.2444 29.0224 26.8877 29.0534 26.5078C29.0832 26.1437 29.0832 25.6979 29.0832 25.1638V25.1636V25.1332V19.5332V19.5027V19.5025C29.0832 18.9685 29.0832 18.5227 29.0534 18.1585C29.0224 17.7786 28.9553 17.422 28.7834 17.0847C28.5198 16.5673 28.0991 16.1466 27.5816 15.8829C27.2444 15.7111 26.8877 15.6439 26.5078 15.6129C26.1436 15.5832 25.6978 15.5832 25.1636 15.5832H25.1332H25.0832V10.9998C25.0832 5.43097 20.5687 0.916504 14.9998 0.916504Z" fill="#43A1F7"/>
+						</svg>
+						<div class='relative social-hover'>
+								<div class='faq-social '>Support</div>
+								<span class='absolute w-[4px] h-full bg-socialBlue'></span>
+							</div>
+						</a>
+					</div>
+					<!-- SUPPORT END -->
+
 				</div>
+				<!-- ACCORDION -->
+					<div class='w-[90%] mx-auto mt-10 md:mt-12 lg:mt-14 xl:mt-20'>
+						<button id='accordion-btn' class="accordion-btn ">
+							<div class='accordion-btn-text'>How to start investing</div>
+						</button>
+							<div class="accordion-panel">
+								<p class='py-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, placeat.</p>
+							</div>
+						<button id='accordion-btn' class="accordion-btn ">
+							<div class='accordion-btn-text'>How much money is needed to start investing?</div>
+						</button>
+							<div class="accordion-panel">
+								<p class='py-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, placeat.</p>
+							</div>
+						<button id='accordion-btn' class="accordion-btn ">
+							<div class='accordion-btn-text'>Is the Midas.Investments secure?</div>
+						</button>
+							<div class="accordion-panel">
+								<p class='py-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, placeat.</p>
+							</div>
+						<button id='accordion-btn' class="accordion-btn ">
+							<div class='accordion-btn-text'>How are funds withdrawn from the platform?</div>
+						</button>
+							<div class="accordion-panel">
+								<p class='py-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, placeat.</p>
+							</div>
+						<button id='accordion-btn' class="accordion-btn ">
+							<div class='accordion-btn-text'>How Midas.Investments generates yield for its customers?</div>
+						</button>
+							<div class="accordion-panel">
+								<p class='py-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, placeat.</p>
+							</div>
+						<button id='accordion-btn' class="accordion-btn ">
+							<div class='accordion-btn-text'>What is Midas token and what are its values?</div>
+						</button>
+							<div class="accordion-panel">
+								<p class='py-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, placeat.</p>
+							</div>
+					</div>
+					<!-- ACCORDION END -->
+				</section>
+			</div>
 		</div>
 		<!-- FAQ SECTION END -->
+
+		<!-- FOOTER -->
+		<footer class="hidden sm:block bg-main mt-0.5 pt-10 pb-14">
+			<div class='footer-list container rounded-container flex justify-between gap-2 flex-wrap'>
+				<!-- STYLED IN CSS FILE -->
+				<div>
+					<ul>
+						<li class='px-3'>Products</li>
+						<li><a class='links-hover' href="#">Platform</a></li>
+						<li><a class='links-hover' href="#">Swap</a></li>
+						<li><a class='links-hover' href="#">Yield Automated Strategies</a></li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li class='px-3'>Resources</li>
+						<li><a class='links-hover' href="#">Blog</a></li>
+						<li><a class='links-hover' href="#">Community</a></li>
+						<li><a class='links-hover' href="#">Earn Save Invest Repeat</a></li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li class='px-3'>Help</li>
+						<li><a class='links-hover' href="#">Contacts</a></li>
+						<li><a class='links-hover' href="#">Support</a></li>
+						<li><a class='links-hover' href="#">User greement</a></li>
+					</ul>
+				</div>
+				<div class='border-t-2 md:border-t-0 border-white border-opacity-10'>
+					<ul>
+						<li class='px-3'>Buy Midas coin</li>
+						<li><a class='links-hover' href="#">Spiritswap</a></li>
+						<li><a class='links-hover' href="#">Boombswap</a></li>
+					</ul>
+				</div>
+				<div class='md:mt-8 lg:mt-0 md:w-[30%] border-t-2 lg:border-t-0 border-white border-opacity-10 lg:w-[15%]'>
+					<ul>
+						<li>MDF AG</li>
+						<li>Felsenstrasse 62, 8832, Wollerau, Switzerland</li>
+						<li>CHE-323.398.672</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+		<!-- FOOTER END -->
 
 	</body>
 

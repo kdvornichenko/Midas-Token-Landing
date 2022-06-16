@@ -10,6 +10,8 @@ module.exports = {
 			white: '#ffffff',
 			accordionBtn: '#181B20',
 			accordionBtnAfter: '#22252A',
+			accordionBtnAfterHover: '#408ED6',
+			socialBlue: '#43A1F7',
 		},
 		colors: {
 			white: '#fff',

@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer utilities {
+	.links-hover {
+		@apply py-1.5 px-3 hover:bg-white hover:bg-opacity-10 hover:rounded-xl hover:opacity-100 transition-all;
+	}
+
 	.h2 {
 		@apply tracking-tighter text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-bold;
 	}
@@ -17,6 +21,10 @@
 
 	.bg-container {
 		@apply bg-main rounded-3xl lg:rounded-[4rem] mt-1;
+	}
+
+	.bg-container-faq {
+		@apply bg-main rounded-t-3xl lg:rounded-t-[4rem] mt-1;
 	}
 
 	.rounded-container {
@@ -60,7 +68,7 @@
 	}
 
 	.step-block {
-		@apply mt-20 md:mt-4 flex flex-col sm:flex-row justify-between sm:items-center;
+		@apply mt-9 md:mt-4 flex flex-col sm:flex-row justify-between sm:items-center;
 	}
 
 	.step-label {
@@ -76,11 +84,11 @@
 	}
 
 	.faq-social {
-		@apply text-2xl lg:text-3xl font-medium tracking-tighter text-socialBlue;
+		@apply text-2xl lg:text-3xl font-medium tracking-tighter;
 	}
 
 	.accordion-btn {
-		@apply mt-2 lg:mt-3 xl:mt-4 w-full p-6 text-base sm:text-lg lg:text-xl xl:text-2xl text-left tracking-tighter font-semibold bg-accordionBtn rounded-3xl transition-all relative after:w-[32px] after:h-8 md:after:w-[48px] md:after:h-12 after:rounded-full after:bg-arrow after:bg-no-repeat after:bg-center after:bg-accordionBtnAfter  after:absolute after:right-[5%] after:top-[50%] after:-translate-y-1/2 after:transition-all;
+		@apply relative mt-2 lg:mt-3 xl:mt-4 w-full p-6 text-base sm:text-lg lg:text-xl xl:text-2xl text-left tracking-tighter font-semibold bg-accordionBtn hover:bg-mainSecondary after:w-[32px] after:h-8 md:after:w-[48px] md:after:h-12 after:rounded-full after:bg-arrow after:bg-no-repeat after:bg-center after:bg-accordionBtnAfter hover:after:bg-accordionBtnAfterHover after:absolute after:right-[2%] after:top-[50%] after:-translate-y-1/2 after:transition-all;
 	}
 
 	.accordion-btn-text {
@@ -88,7 +96,7 @@
 	}
 
 	.accordion-panel {
-		@apply max-h-0 overflow-hidden px-5;
+		@apply max-h-0 overflow-hidden px-5 rounded-b-3xl  bg-accordionBtn;
 	}
 }
 
@@ -223,17 +231,131 @@
 	/* SUPPORT SECTION END */
 
 	/* FAQ ACCORDION */
-	.accordion-btn.active,
-	.accordion-btn:hover {
-		background: #1d2026;
+	.accordion-btn {
+		border-radius: 24px;
 	}
 
 	.accordion-btn.active:after {
 		--tw-rotate: 180deg;
+		background-color: #43a1f7;
+		box-shadow: 0px 0px 40px 0px rgba(67, 161, 247, 0.5),
+			inset 0px 6px 16px rgba(255, 255, 255, 0.16);
 	}
 
 	.accordion-panel {
-		transition: all 0.2s ease-out;
+		transition: 0.2s ease-out;
+	}
+
+	.transitionAdd {
+		transition: 0.4s;
+		transition-delay: 0.08s;
+		border-bottom-left-radius: 24px;
+		border-bottom-right-radius: 24px;
+	}
+
+	.transitionRemove {
+		transition: 0s;
+		transition-delay: 0s;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
 	}
 	/* FAQ ACCORDION END */
+
+	/* FOOTER */
+	.footer-list ul li:not(:first-child) a {
+		opacity: 0.5;
+	}
+
+	.footer-list ul li:not(:first-child) a:hover {
+		opacity: 1;
+	}
+
+	.footer-list ul li:nth-child(2) {
+		margin-top: 12px;
+	}
+
+	.footer-list ul li {
+		margin-top: 10px;
+	}
+
+	.footer-list div:last-child ul li {
+		opacity: 0.5;
+	}
+
+	.footer-list div:last-child ul li:hover {
+		opacity: 0.5;
+	}
+	/* FOOTER END */
+
+	/* BUTTON HOVER */
+	.btn-hover:hover {
+		background: linear-gradient(
+			90deg,
+			#ffffff,
+			#ffffff,
+			#43a1f7,
+			#8643dc,
+			#f743af,
+			#f78070,
+			#be40ff,
+			#20bcff,
+			#00f69e,
+			#ffffff,
+			#ffffff
+		);
+		animation: gradient 8s linear infinite;
+		background-size: 1000% 1000%;
+	}
+
+	.btn-hover:hover span {
+		color: transparent;
+		background-clip: text;
+		background-image: linear-gradient(
+			90deg,
+			#000,
+			#000,
+			#fff,
+			#fff,
+			#fff,
+			#fff,
+			#fff,
+			#fff,
+			#fff,
+			#000,
+			#000
+		);
+		animation: gradient 8s linear infinite;
+		background-size: 1000% 1000%;
+	}
+	/* BUTTON HOVER END */
+
+	/* SOCIAL ICONS HOVER */
+	.social-hover {
+		--s: 0.1em;
+		--c: #fff;
+		color: #0000;
+		background: linear-gradient(90deg, #43a1f7 50%, var(--c) 0)
+			calc(100% - var(--_p, 0%)) / 200% 100%;
+		-webkit-background-clip: text, padding-box;
+		background-clip: text, padding-box;
+		transition: all 0.5s ease 0.3s;
+	}
 }
+
+.social:hover .social-hover {
+	--_p: 100%;
+}
+
+.social-hover span {
+	left: -0.5rem;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: left 0.5s ease-in-out 0.2s, height 0.2s ease;
+	height: 0;
+}
+
+.social:hover .social-hover span {
+	left: 103%;
+	height: 100%;
+}
+/* SOCIAL ICONS HOVER END */
