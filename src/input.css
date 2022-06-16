@@ -74,6 +74,22 @@
 	.how-to-buy-subtext {
 		@apply mt-3 md:mt-5 font-semibold text-2xl md:text-3xl lg:text-4xl tracking-tighter;
 	}
+
+	.faq-social {
+		@apply text-2xl lg:text-3xl font-medium tracking-tighter text-socialBlue;
+	}
+
+	.accordion-btn {
+		@apply mt-2 lg:mt-3 xl:mt-4 w-full p-6 text-base sm:text-lg lg:text-xl xl:text-2xl text-left tracking-tighter font-semibold bg-accordionBtn rounded-3xl transition-all relative after:w-[32px] after:h-8 md:after:w-[48px] md:after:h-12 after:rounded-full after:bg-arrow after:bg-no-repeat after:bg-center after:bg-accordionBtnAfter  after:absolute after:right-[5%] after:top-[50%] after:-translate-y-1/2 after:transition-all;
+	}
+
+	.accordion-btn-text {
+		@apply w-[90%];
+	}
+
+	.accordion-panel {
+		@apply max-h-0 overflow-hidden px-5;
+	}
 }
 
 @layer components {
@@ -205,4 +221,19 @@
 		filter: blur(150px);
 	}
 	/* SUPPORT SECTION END */
+
+	/* FAQ ACCORDION */
+	.accordion-btn.active,
+	.accordion-btn:hover {
+		background: #1d2026;
+	}
+
+	.accordion-btn.active:after {
+		--tw-rotate: 180deg;
+	}
+
+	.accordion-panel {
+		transition: all 0.2s ease-out;
+	}
+	/* FAQ ACCORDION END */
 }

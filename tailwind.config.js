@@ -8,6 +8,8 @@ module.exports = {
 			mobMenu: '#323639',
 			cards: '#262626',
 			white: '#ffffff',
+			accordionBtn: '#181B20',
+			accordionBtnAfter: '#22252A',
 		},
 		colors: {
 			white: '#fff',
@@ -15,6 +17,7 @@ module.exports = {
 			transparent: 'transparent',
 			lightBlue: '#577CFF',
 			blue: '#4CBFFF',
+			socialBlue: '#43A1F7',
 		},
 		width: {
 			4: '1rem',
@@ -30,6 +33,9 @@ module.exports = {
 				text: '0px 32px 64px rgba(255, 255, 255, 0.08)',
 				textSpan: '0px 16px 64px rgba(78, 185, 255, 0.16)',
 				metricsCard: '0px 40px 64px -30px rgba(0, 0, 0, 0.4)',
+			},
+			backgroundImage: {
+				arrow: 'url("../src/img/accordion-arrow.svg")',
 			},
 		},
 	},
