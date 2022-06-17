@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', function () {
 	}
 
 	burger.classList.add('untoggle')
-	burger.addEventListener('click', function () {
+	burger.addEventListener('click', function closeMenu() {
 		this.classList.toggle('toggled')
 		this.classList.toggle('unToggled')
 		mobMenu.classList.toggle('-right-[100%]')
@@ -43,6 +43,35 @@ window.addEventListener('DOMContentLoaded', function () {
 		mobRight.classList.toggle('right-0')
 		body.classList.toggle('overflow-y-hidden')
 	})
+
+	// Прокрутка при клике
+
+	const menuLinks = document.querySelectorAll('.menu-link[data-goto]')
+
+	if (menuLinks.length > 0) {
+		menuLinks.forEach(menuLinks => {
+			menuLinks.addEventListener('click', onmenuLinkClick)
+		})
+	}
+
+	function onmenuLinkClick(e) {
+		const menuLink = e.target
+		if (
+			menuLink.dataset.goto &&
+			document.querySelector(menuLink.dataset.goto)
+		) {
+			const gotoBlock = document.querySelector(menuLink.dataset.goto)
+			const gotoBlockValue =
+				gotoBlock.getBoundingClientRect().top +
+				scrollY -
+				document.querySelector('header').offsetHeight
+			window.scrollTo({
+				top: gotoBlockValue,
+				behavior: 'smooth',
+			})
+			e.preventDefault()
+		}
+	}
 
 	// // METRIC SECTION INCREMENTING COUNTER
 	// const counters = document.querySelectorAll('#counter')

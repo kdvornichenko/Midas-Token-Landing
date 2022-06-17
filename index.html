@@ -15,7 +15,7 @@
 	</head>
 	<body
 		id="body"
-		class="bg-mainSecondary font-inter text-white overflow-x-hidden"
+		class="bg-mainSecondary font-inter text-white overflow-x-hidden relative"
 	>
 		<!-- ANNOUNCEMENT BLOCK -->
 		<div id="announcement" class="bg-main">
@@ -90,10 +90,10 @@
 				<ul
 					class="hidden sm:flex gap-8 items-center text-sm sm:text-base ml-7"
 				>
-					<li><a class='links-hover opacity-60' href="#">Platform</a></li>
-					<li><a class='links-hover opacity-60' href="#">Midas Coin</a></li>
-					<li><a class='links-hover opacity-60' href="#">YAPs</a></li>
-					<li><a class='links-hover opacity-60' href="#">Resources</a></li>
+					<li><a data-goto='.metrics' class='links-hover opacity-60 menu-link' href="#">Metrics</a></li>
+					<li><a data-goto='.coin' class='links-hover opacity-60 menu-link' href="#">Midas Coin</a></li>
+					<li><a data-goto='.how-to-buy' class='links-hover opacity-60 menu-link' href="#">How to buy</a></li>
+					<li><a data-goto='.FAQ' class='links-hover opacity-60 menu-link' href="#">FAQ</a></li>
 				</ul>
 
 				<div
@@ -120,10 +120,10 @@
 					class="w-[50%] h-full bg-mobMenu -right-full absolute duration-500"
 				>
 					<ul class="flex flex-col gap-6 text-2xl absolute right-6 top-32">
-						<li><a href="#">Platform</a></li>
-						<li><a href="#">Midas Coin</a></li>
-						<li><a href="#">YAPs</a></li>
-						<li><a href="#">Resources</a></li>
+						<li><a class='menu-link' data-goto='.metrics' href="#">Metrics</a></li>
+						<li><a class='menu-link' data-goto='.coin' href="#">Midas Coin</a></li>
+						<li><a class='menu-link' data-goto='.how-to-buy' href="#">How to buy</a></li>
+						<li><a class='menu-link' data-goto='.FAQ' href="#">FAQ</a></li>
 					</ul>
 				</div>
 			</div>
@@ -436,7 +436,7 @@
 		<!-- MAIN SCREEN END -->
 
 		<!-- METRIC SECTION -->
-		<div class="bg-container">
+		<div class="bg-container metrics">
 			<div class="container rounded-container">
 				<section
 					class="section relative"
@@ -523,7 +523,7 @@
 		<!-- METRIC SECTION END -->
 
 		<!-- STAKE SECTION -->
-		<div class="bg-container">
+		<div class="bg-container coin">
 			<div class="container px-4 m-auto">
 				<section
 					class="section ml-8 md:ml-12"
@@ -944,8 +944,7 @@
 		<!-- HOW WE SUPPORT SECTION END -->
 
 		<!-- HOW TO BUY SECTION -->
-
-		<div class="bg-container">
+		<div class="bg-container how-to-buy">
 			<div class="container px-4 m-auto">
 				<section
 					class="section"
@@ -1008,7 +1007,7 @@
 		<!-- HOW TO BUY SECTION END -->
 
 		<!-- FAQ SECTION -->
-		<div class="bg-container-faq">
+		<div class="bg-container-faq FAQ">
 			<div class="container rounded-container">
 				<section class="section relative">
 				<h2 class='h2 text-center'>Frequently asked questions</h2>
