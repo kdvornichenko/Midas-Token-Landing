@@ -951,6 +951,14 @@ h1,
   left: -2.5%;
 }
 
+.top-\[60\^\] {
+  top: 60^;
+}
+
+.top-\[60\%\] {
+  top: 60%;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -1509,6 +1517,11 @@ h1,
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .pr-3 {
@@ -2536,6 +2549,10 @@ h1,
 
   .md\:top-\[40\%\] {
     top: 40%;
+  }
+
+  .md\:top-\[55\%\] {
+    top: 55%;
   }
 
   .md\:mt-0 {
