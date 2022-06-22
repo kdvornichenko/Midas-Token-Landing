@@ -1,15 +1,7 @@
 window.addEventListener('DOMContentLoaded', function () {
-	// ANNOUNCEMENT
-	const announcement = document.getElementById('announcement'),
-		cross = document.getElementById('cross')
-	cross.addEventListener('click', closeAnnouncement)
-
-	function closeAnnouncement() {
-		announcement.style.display = 'none'
-	}
 
 	// BURGER
-	const burger = document.getElementById('burger')
+
 	const mobMenu = document.getElementById('mobMenu')
 	const mobLeft = document.getElementById('mobLeft')
 	const mobRight = document.getElementById('mobRight')
@@ -21,11 +13,11 @@ window.addEventListener('DOMContentLoaded', function () {
 				mobMenu.classList.remove('z-10')
 			}, 500)
 			setTimeout(function () {
-				mobMenu.classList.add('z-[-1]')
+				mobMenu.classList.add('z-[-100]')
 			}, 500)
 			console.log('qwe')
 		} else {
-			mobMenu.classList.remove('z-[-1]')
+			mobMenu.classList.remove('z-[-100]')
 			mobMenu.classList.add('z-10')
 		}
 	}

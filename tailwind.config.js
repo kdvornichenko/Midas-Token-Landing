@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./src/**/*.{html,js}'],
+	content: ['./*.{html,js}'],
 	theme: {
 		backgroundColor: {
 			main: '#161616',
@@ -12,6 +12,7 @@ module.exports = {
 			accordionBtnAfter: '#22252A',
 			accordionBtnAfterHover: '#408ED6',
 			socialBlue: '#43A1F7',
+			sidemenuBg: '#2CC4CB',
 		},
 		colors: {
 			white: '#fff',
@@ -20,14 +21,6 @@ module.exports = {
 			lightBlue: '#577CFF',
 			blue: '#4CBFFF',
 			socialBlue: '#43A1F7',
-		},
-		width: {
-			4: '1rem',
-			6: '1.5rem',
-			1180: '73.75rem',
-			1440: '90rem',
-			full: '100%',
-			unset: 'unset',
 		},
 		extend: {
 			boxShadow: {
@@ -38,6 +31,9 @@ module.exports = {
 			},
 			backgroundImage: {
 				arrow: 'url("../src/img/accordion-arrow.svg")',
+			},
+			transitionTimingFunction: {
+				sideMenu: 'cubic-bezier(0.04,0.79,0.34,1.3)',
 			},
 		},
 	},

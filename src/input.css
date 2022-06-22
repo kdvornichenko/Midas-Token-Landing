@@ -35,6 +35,18 @@
 		@apply py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-32;
 	}
 
+	.sidemenu {
+		@apply bg-sidemenuBg fixed right-0 w-[300px] h-full translate-x-[300px] transition-all duration-500 ease-sideMenu;
+	}
+
+	.sidemenu-open {
+		@apply translate-x-0;
+	}
+
+	.menu-list {
+		@apply block mb-6 opacity-0 transition-all duration-500 ease-sideMenu;
+	}
+
 	.mainscreen-cards {
 		@apply w-[95%] sm:w-[70%] md:w-[60%] lg:w-[30%] flex flex-col bg-white bg-opacity-[0.08] rounded-3xl p-8 xl:p-7 lg:p-6 md:p-5 sm:p-4 border border-white border-opacity-5 shadow-cards;
 	}
@@ -44,7 +56,7 @@
 	}
 
 	.metrics-card {
-		@apply flex flex-col justify-between sm:w-[50%] md:w-[310px] lg:w-[400px] xl:w-[480px] h-32 md:h-[160px] lg:h-44 xl:h-[206px] p-4 lg:p-8  bg-white bg-opacity-5 border border-white border-opacity-5 shadow-metricsCard backdrop-blur-lg rounded-[32px];
+		@apply flex flex-col justify-between sm:w-[50%] md:w-[310px] lg:w-[400px] xl:w-[480px] h-32 md:h-[160px] lg:h-44 xl:h-[206px] p-4 lg:p-8 bg-white bg-opacity-5 border border-white border-opacity-5 shadow-metricsCard backdrop-blur-lg rounded-[32px];
 	}
 
 	.stake-total-item {
@@ -60,7 +72,7 @@
 	}
 
 	.stake-icon {
-		@apply w-[22%] sm:w-unset p-4 md:p-7 rounded-full bg-opacity-20;
+		@apply w-[22%] sm:w-auto p-4 md:p-7 rounded-full bg-opacity-20;
 	}
 
 	.utility-payout-bars {
@@ -96,7 +108,7 @@
 	}
 
 	.accordion-panel {
-		@apply max-h-0 overflow-hidden px-5 rounded-b-3xl  bg-accordionBtn;
+		@apply max-h-0 overflow-hidden px-5 rounded-b-3xl bg-accordionBtn;
 	}
 }
 
@@ -169,6 +181,21 @@
 	}
 	.burger1.toggled > div::after {
 		transform: rotate(-45deg) translate(0.5em, 0em);
+	}
+
+	.sidemenu-open ul li {
+		animation: slideIn 0.3s ease;
+	}
+
+	@keyframes slideIn {
+		0% {
+			opacity: 0;
+			transform: translateX(-50px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateX(0px);
+		}
 	}
 
 	/* BURGER ANIMATION END */
