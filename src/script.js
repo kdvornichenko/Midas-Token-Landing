@@ -10,11 +10,11 @@ window.addEventListener('DOMContentLoaded', function () {
 	burger.addEventListener('click', menuLinkClick)
 
 	function menuLinkClick() {
+		body.classList.toggle('overflow-y-hidden')
 		burger.classList.toggle('toggled')
 		burger.classList.toggle('unToggled')
 		mobMenu.classList.toggle('-right-full')
 		mobMenu.classList.toggle('right-0')
-		body.classList.toggle('overflow-y-hidden')
 		main.classList.toggle('opacity-30')
 		main.classList.toggle('opacity-100')
 		nav.classList.toggle('opacity-30')
