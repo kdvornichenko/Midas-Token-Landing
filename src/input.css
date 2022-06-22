@@ -158,44 +158,29 @@
 	/* TOP GRADIENT LINE END */
 
 	/* BURGER ANIMATION */
-	.burger1 {
+	.burger {
 		transition: all 0.7s, font-size 0s;
 		transition-timing-function: cubic-bezier(0.68, -0.35, 0.265, 1.35);
 	}
 
-	.burger1 > div {
+	.burger > div {
 		transition: all 0.1s 0.3s, font-size 0s;
 	}
-	.burger1 > div::before,
-	.burger1 > div::after {
+	.burger > div::before,
+	.burger > div::after {
 		transition: all 0.3s 0.2s, font-size 0s;
 	}
-	.burger1.toggled {
+	.burger.toggled {
 		transform: rotate(180deg);
 	}
-	.burger1.toggled > div::before {
+	.burger.toggled > div::before {
 		transform: rotate(45deg) translate(0.5em, 0em);
 	}
-	.burger1.toggled > div {
+	.burger.toggled > div {
 		background: transparent;
 	}
-	.burger1.toggled > div::after {
+	.burger.toggled > div::after {
 		transform: rotate(-45deg) translate(0.5em, 0em);
-	}
-
-	.sidemenu-open ul li {
-		animation: slideIn 0.3s ease;
-	}
-
-	@keyframes slideIn {
-		0% {
-			opacity: 0;
-			transform: translateX(-50px);
-		}
-		100% {
-			opacity: 1;
-			transform: translateX(0px);
-		}
 	}
 
 	/* BURGER ANIMATION END */

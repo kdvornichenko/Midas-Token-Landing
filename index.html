@@ -17,11 +17,24 @@
 		id="body"
 		class="bg-mainSecondary font-inter text-white overflow-x-hidden relative"
 	>
+		<!-- MOBILE MENU -->
+		<div
+			id="mobMenu"
+			class="flex sm:hidden text-right fixed top-0 w-1/2 h-full bg-mobMenu -right-full duration-500 opacity-100 z-10"
+		>
+			<ul class="flex flex-col gap-6 text-2xl absolute right-6 top-32">
+				<li><a class='menu-link' data-goto='.metrics' href="#">Metrics</a></li>
+				<li><a class='menu-link' data-goto='.coin' href="#">Midas Coin</a></li>
+				<li><a class='menu-link' data-goto='.how-to-buy' href="#">How to buy</a></li>
+				<li><a class='menu-link' data-goto='.FAQ' href="#">FAQ</a></li>
+			</ul>
+		</div>
+		<!-- MOBILE MENU END -->
 	<!-- HEADER -->	
-		<header class="bg-main fixed z-50 w-full">
+		<header class="bg-main w-full">
 		
 			<div class='container rounded-container'>
-				<nav class="flex justify-between sm:justify-start w-[95vw] sm:w-full">
+				<nav id='nav' class="flex justify-between sm:justify-start w-[95vw] sm:w-full">
 				<img src="./src/img/Logo.svg" alt="Logo" />
 				<ul
 					class="hidden sm:flex gap-8 items-center text-sm sm:text-base ml-7"
@@ -32,56 +45,23 @@
 					<li><a data-goto='.FAQ' class='links-hover opacity-60 menu-link' href="#">FAQ</a></li>
 				</ul>
 
-				<div
+				
+			</nav>
+			<div
 					id="burger"
-					class="burger burger1 flex items-center text-base cursor-pointer sm:hidden z-20"
+					class="burger fixed right-[5%] top-[5%] flex items-center text-base cursor-pointer sm:hidden z-20"
 				>
 					<div
 						class="w-6 h-0.5 rounded-2xl bg-white before:block before:absolute before:w-6 before:h-0.5 before:bg-white before:rounded-2xl before:-mt-1.5 after:block after:absolute after:w-6 after:h-0.5 after:bg-white after:rounded-2xl after:mt-1.5"
 					></div>
 				</div>
 
-				<!-- <button id="burger" class="burger">
-					<span class='relative w-6 bg-white block rounded-md transition-all duration-300 before:block after:block before:h-1 after:h-1 before:w-6 after:w-6 before:bg-white after:bg-white before:absolute after:absolute before:-top-2 after:-bottom-2 before:rounded-md after:rounded-md before:transition-all after:transition-all before:duration-300 after:duration-300 before:ease-in-out after:ease-in-out'></span>
-				</button> -->
 
-				<!-- <div class="sidemenu">
-					<ul class="main_menu p-20">
-						<li class='menu-list'><a class='menu-list-link' data-goto='.metrics' href="#">Metrics</a></li>
-						<li class='menu-list'><a class='menu-list-link' data-goto='.coin' href="#">Midas Coin</a></li>
-						<li class='menu-list'><a class='menu-list-link' data-goto='.how-to-buy' href="#">How to buy</a></li>
-						<li class='menu-list'><a class='menu-list-link' data-goto='.FAQ' href="#">FAQ</a></li>
-					</ul>
-				</div> -->
-			</nav>
-
-			<!-- MOBILE MENU -->
-			<div
-				id="mobMenu"
-				class="flex w-full sm:hidden h-[100vh] text-right fixed top-0 z-[-100]"
-			>
-				<div
-					id="mobLeft"
-					class="w-[55%] h-full bg-mobMenu -left-full absolute opacity-80 duration-500"
-				></div>
-				<div
-					id="mobRight"
-					class="w-1/2 h-full bg-mobMenu -right-full absolute duration-500"
-				>
-					<ul class="flex flex-col gap-6 text-2xl absolute right-6 top-32">
-						<li><a class='menu-link' data-goto='.metrics' href="#">Metrics</a></li>
-						<li><a class='menu-link' data-goto='.coin' href="#">Midas Coin</a></li>
-						<li><a class='menu-link' data-goto='.how-to-buy' href="#">How to buy</a></li>
-						<li><a class='menu-link' data-goto='.FAQ' href="#">FAQ</a></li>
-					</ul>
-				</div>
-			</div>
-			<!-- MOBILE MENU END -->
 			</div>
 		</header>
 		<!-- HEADER END -->
 
-	<main id='main' class='pt-[3.875rem]'>
+	<main id='main' class='opacity-100'>
 			<!-- MAIN SCREEN -->
 		<div class="bg-main lg:rounded-b-[4rem] rounded-b-3xl pt-8 sm:pt-16 md:pt-18 lg:pt-20 ">
 				<div class="container rounded-container">
