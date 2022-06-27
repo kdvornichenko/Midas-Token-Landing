@@ -865,6 +865,10 @@ h1,
   top: 0px;
 }
 
+.-right-full {
+  right: -100%;
+}
+
 .right-6 {
   right: 1.5rem;
 }
@@ -929,10 +933,6 @@ h1,
   right: 0px;
 }
 
-.-right-full {
-  right: -100%;
-}
-
 .z-10 {
   z-index: 10;
 }
@@ -943,6 +943,10 @@ h1,
 
 .z-0 {
   z-index: 0;
+}
+
+.z-50 {
+  z-index: 50;
 }
 
 .m-auto {
@@ -1477,6 +1481,10 @@ h1,
 
 .pt-10 {
   padding-top: 2.5rem;
+}
+
+.pt-24 {
+  padding-top: 6rem;
 }
 
 .text-left {
@@ -2417,6 +2425,10 @@ h1,
     padding-top: 4rem;
   }
 
+  .sm\:pt-32 {
+    padding-top: 8rem;
+  }
+
   .sm\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -2617,6 +2629,10 @@ h1,
     padding-bottom: 0px;
   }
 
+  .md\:pt-32 {
+    padding-top: 8rem;
+  }
+
   .md\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
@@ -2799,6 +2815,10 @@ h1,
 
   .lg\:pb-32 {
     padding-bottom: 8rem;
+  }
+
+  .lg\:pt-36 {
+    padding-top: 9rem;
   }
 
   .lg\:text-8xl {

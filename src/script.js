@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', function () {
 	burger.classList.add('untoggle')
 	burger.addEventListener('click', menuLinkClick)
 
-	function menuLinkClick() {
+	function menuLinkClick(e) {
 		body.classList.toggle('overflow-y-hidden')
 		burger.classList.toggle('toggled')
 		burger.classList.toggle('unToggled')
@@ -19,11 +19,13 @@ window.addEventListener('DOMContentLoaded', function () {
 		main.classList.toggle('opacity-100')
 		nav.classList.toggle('opacity-30')
 		nav.classList.toggle('opacity-100')
+		onmenuLinkClick(e)
 	}
 
 	// Прокрутка при клике
 
 	const menuLinks = document.querySelectorAll('.menu-link[data-goto]')
+	const mobMenuLinks = document.querySelectorAll('.menu-link-mob[data-goto]')
 
 	if (menuLinks.length > 0) {
 		menuLinks.forEach(menuLinks => {
@@ -31,8 +33,13 @@ window.addEventListener('DOMContentLoaded', function () {
 		})
 	}
 
+	if (mobMenuLinks.length > 0) {
+		mobMenuLinks.forEach(mobMenuLinks => {
+			mobMenuLinks.addEventListener('click', menuLinkClick)
+		})
+	}
+
 	function onmenuLinkClick(e) {
-		menuLinkClick()
 		const menuLink = e.target
 		if (
 			menuLink.dataset.goto &&

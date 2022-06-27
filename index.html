@@ -23,15 +23,15 @@
 			class="flex sm:hidden text-right fixed top-0 w-1/2 h-full -right-full bg-mobMenu duration-500 opacity-100 z-10"
 		>
 			<ul class="flex flex-col gap-6 text-2xl absolute right-6 top-32">
-				<li><a class='menu-link' data-goto='.metrics' href="#">Metrics</a></li>
-				<li><a class='menu-link' data-goto='.coin' href="#">Midas Coin</a></li>
-				<li><a class='menu-link' data-goto='.how-to-buy' href="#">How to buy</a></li>
-				<li><a class='menu-link' data-goto='.FAQ' href="#">FAQ</a></li>
+				<li><a class='menu-link-mob' data-goto='.metrics' href="#">Metrics</a></li>
+				<li><a class='menu-link-mob' data-goto='.coin' href="#">Midas Coin</a></li>
+				<li><a class='menu-link-mob' data-goto='.how-to-buy' href="#">How to buy</a></li>
+				<li><a class='menu-link-mob' data-goto='.FAQ' href="#">FAQ</a></li>
 			</ul>
 		</div>
 		<!-- MOBILE MENU END -->
 	<!-- HEADER -->	
-		<header class="bg-main w-full">
+		<header class="bg-main w-full fixed z-50">
 		
 			<div class='container rounded-container'>
 				<nav id='nav' class="flex justify-between sm:justify-start w-[95vw] sm:w-full">
@@ -39,10 +39,10 @@
 				<ul
 					class="hidden sm:flex gap-8 items-center text-sm sm:text-base ml-7"
 				>
-					<li><a data-goto='.metrics' class='links-hover opacity-60 menu-link' href="#">Metrics</a></li>
-					<li><a data-goto='.coin' class='links-hover opacity-60 menu-link' href="#">Midas Coin</a></li>
-					<li><a data-goto='.how-to-buy' class='links-hover opacity-60 menu-link' href="#">How to buy</a></li>
-					<li><a data-goto='.FAQ' class='links-hover opacity-60 menu-link' href="#">FAQ</a></li>
+					<li><a data-goto='.metrics' class='links-hover opacity-60 menu-link menu-link' href="#">Metrics</a></li>
+					<li><a data-goto='.coin' class='links-hover opacity-60 menu-link menu-link' href="#">Midas Coin</a></li>
+					<li><a data-goto='.how-to-buy' class='links-hover opacity-60 menu-link menu-link' href="#">How to buy</a></li>
+					<li><a data-goto='.FAQ' class='links-hover opacity-60 menu-link menu-link' href="#">FAQ</a></li>
 				</ul>
 
 				
@@ -63,7 +63,7 @@
 
 	<main id='main' class='opacity-100'>
 			<!-- MAIN SCREEN -->
-		<div class="bg-main lg:rounded-b-[4rem] rounded-b-3xl pt-8 sm:pt-16 md:pt-18 lg:pt-20 ">
+		<div class="bg-main lg:rounded-b-[4rem] rounded-b-3xl pt-24 sm:pt-32 lg:pt-36 ">
 				<div class="container rounded-container">
 				<!-- MAIN SECTION -->
 				<section class="pb-6 lg:pb-32">
