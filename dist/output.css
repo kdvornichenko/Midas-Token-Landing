@@ -897,6 +897,10 @@ h1,
   top: 45%;
 }
 
+.top-\[50\%\] {
+  top: 50%;
+}
+
 .-left-\[30\%\] {
   left: -30%;
 }
@@ -937,16 +941,16 @@ h1,
   z-index: 10;
 }
 
+.z-50 {
+  z-index: 50;
+}
+
 .z-20 {
   z-index: 20;
 }
 
 .z-0 {
   z-index: 0;
-}
-
-.z-50 {
-  z-index: 50;
 }
 
 .m-auto {
@@ -1467,8 +1471,8 @@ h1,
   padding-bottom: 1.25rem;
 }
 
-.pt-8 {
-  padding-top: 2rem;
+.pt-24 {
+  padding-top: 6rem;
 }
 
 .pb-6 {
@@ -1481,10 +1485,6 @@ h1,
 
 .pt-10 {
   padding-top: 2.5rem;
-}
-
-.pt-24 {
-  padding-top: 6rem;
 }
 
 .text-left {
@@ -2341,8 +2341,16 @@ h1,
 }
 
 @media (min-width: 640px) {
+  .sm\:fixed {
+    position: fixed;
+  }
+
   .sm\:top-\[55\%\] {
     top: 55%;
+  }
+
+  .sm\:top-\[60\%\] {
+    top: 60%;
   }
 
   .sm\:mt-24 {
@@ -2419,10 +2427,6 @@ h1,
 
   .sm\:rounded-\[30px\] {
     border-radius: 30px;
-  }
-
-  .sm\:pt-16 {
-    padding-top: 4rem;
   }
 
   .sm\:pt-32 {
@@ -2629,10 +2633,6 @@ h1,
     padding-bottom: 0px;
   }
 
-  .md\:pt-32 {
-    padding-top: 8rem;
-  }
-
   .md\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
@@ -2809,16 +2809,12 @@ h1,
     padding-right: 2rem;
   }
 
-  .lg\:pt-20 {
-    padding-top: 5rem;
+  .lg\:pt-36 {
+    padding-top: 9rem;
   }
 
   .lg\:pb-32 {
     padding-bottom: 8rem;
-  }
-
-  .lg\:pt-36 {
-    padding-top: 9rem;
   }
 
   .lg\:text-8xl {
